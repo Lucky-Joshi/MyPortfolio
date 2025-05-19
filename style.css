@@ -3,3 +3,12 @@ body {
     scroll-behavior: smooth;
   }
   
+  /* Skill badge styling */
+.skill-badge {
+  padding: 0.5rem 1rem;
+  background-color: #ebf8ff;
+  color: #3182ce;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
