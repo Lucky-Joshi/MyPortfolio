@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lucky Joshi - Frontend Developer Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    @media print {
+      .no-print {
+        display: none;
+      }
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .page {
+        page-break-after: avoid;
+        page-break-before: avoid;
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+  <div class="max-w-3xl mx-auto p-8 bg-white shadow-xl rounded-lg mt-8 page">
+    <header class="mb-6 border-b pb-4">
+      <h1 class="text-4xl font-bold text-blue-800">Lucky Joshi</h1>
+      <p class="text-lg font-medium text-gray-600">Frontend Developer | UI/UX Enthusiast</p>
+      <div class="mt-2 text-sm text-gray-700 space-y-1">
+        <p>📍 India &nbsp;|&nbsp; 📧 luckyjoshi524@gmail.com</p>
+        <p>
+          🌐 <a href="https://luckyjoshiportfoliopage.netlify.app" class="text-blue-600 underline">Portfolio</a> &nbsp;|&nbsp;
+          <a href="https://github.com/Lucky-Joshi" class="text-blue-600 underline">GitHub</a> &nbsp;|&nbsp;
+          <a href="https://www.linkedin.com/in/lucky-joshi" class="text-blue-600 underline">LinkedIn</a>
+        </p>
+      </div>
+    </header>
+
+    <section class="mb-4">
+      <h2 class="text-xl font-semibold text-blue-700 mb-1">Professional Summary</h2>
+      <p class="text-sm text-gray-800">Self-taught and driven Frontend Developer with a strong passion for crafting responsive, user-friendly interfaces. Skilled in HTML, CSS, JavaScript, and Tailwind CSS with hands-on experience building real-world web applications. Adept at turning creative ideas into interactive websites with clean, accessible code. Actively seeking freelance projects, internships, or entry-level frontend developer roles.</p>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-xl font-semibold text-blue-700 mb-1">Technical Skills</h2>
+      <div class="grid grid-cols-2 gap-2 text-sm text-gray-800">
+        <ul class="list-disc list-inside">
+          <li>HTML5, CSS3, JavaScript (ES6+)</li>
+          <li>Tailwind CSS, Git</li>
+        </ul>
+        <ul class="list-disc list-inside">
+          <li>Responsive Design, SPA, Animations</li>
+          <li>localStorage, Figma, Chrome DevTools</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-xl font-semibold text-blue-700 mb-1">Projects</h2>
+      <div class="space-y-2 text-sm text-gray-800">
+        <div>
+          <strong>📝 Diary Web App:</strong> Rich text editor with themes, trash/restore system, export to PDF/TXT, built using localStorage and Tailwind.
+        </div>
+        <div>
+          <strong>🎉 Bestest Bestfriend Award Website:</strong> Interactive certificate generator with name input, animations, and background music. Fully responsive.
+        </div>
+        <div>
+          <strong>📒 Note-Taking Web App:</strong> Frontend-only notes app with localStorage and modular JS components.
+        </div>
+        <div>
+          <strong>🌐 Frontend Developer Portfolio:</strong> Responsive portfolio with project highlights and contact form. Hosted on Netlify.
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-xl font-semibold text-blue-700 mb-1">Experience</h2>
+      <div class="space-y-2 text-sm text-gray-800">
+        <div>
+          <strong>Freelance Frontend Developer:</strong> Built responsive static websites using Tailwind CSS, with attention to UI/UX and performance.
+        </div>
+        <div>
+          <strong>Content Writer – Math Society, Keshav Mahavidyalaya:</strong> Produced technical and creative content for events and educational initiatives.
+        </div>
+      </div>
+    </section>
+
+    <section class="mb-4">
+      <h2 class="text-xl font-semibold text-blue-700 mb-1">Education</h2>
+      <p class="text-sm text-gray-800">Keshav Mahavidyalaya, University of Delhi<br>Bachelor’s of Science — Expected 2028</p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold text-blue-700 mb-1">Additional Highlights</h2>
+      <ul class="list-disc list-inside text-sm text-gray-800">
+        <li>Exploring Figma for UI/UX design</li>
+        <li>Building consistent personal projects</li>
+        <li>Passionate about clean interfaces and smooth interactions</li>
+      </ul>
+    </section>
+
+    <div class="mt-8 text-center no-print">
+      <button onclick="window.print()" class="bg-blue-600 text-white px-5 py-2 rounded hover:bg-blue-700 shadow">Download / Print Resume</button>
+    </div>
+  </div>
+</body>
+
+</html>
