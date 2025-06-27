@@ -198,10 +198,10 @@
 
       const observer = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
-          new countUp.CountUp('counter-projects', 0).start();
+          new countUp.CountUp('counter-projects', 20).start();
           new countUp.CountUp('counter-clients', 0).start();
-          new countUp.CountUp('counter-hours', 0).start();
-          new countUp.CountUp('counter-coffee', 0).start();
+          new countUp.CountUp('counter-hours', 100).start();
+          new countUp.CountUp('counter-coffee', 10).start();
           observer.disconnect();
         }
       }, { threshold: 0.5 });
