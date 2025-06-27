@@ -111,7 +111,19 @@
         <div class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
           <h4 class="text-xl font-bold text-accent">Periodic Table Game</h4>
           <p class="text-sm mt-2">Interactive game to learn the Modern Periodic Table.</p>  
+        </div>
+        <div class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
+          <h4 class="text-xl font-bold text-accent">LJ Plays</h4>
+          <p class="text-sm mt-2">A Spotify-inspired music player web app with playlists, search functionality, and a cool responsive design.</p>
         </div>  
+        <div class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
+          <h4 class="text-xl font-bold text-accent">Forecastly</h4>
+          <p class="text-sm mt-2">Forecastly is a sleek and responsive web application that provides real-time weather information and a 5-day forecast chart for any city in the world using the OpenWeather API.</p>
+        </div>
+        <div class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
+          <h4 class="text-xl font-bold text-accent">Spyderman Shooting Game</h4>
+          <p class="text-sm mt-2">An engaging shooting game featuring Spyderman as the protagonist, crafted using modern web technologies.</p>
+        </div>
       </div>
     </section>
 
@@ -186,10 +198,10 @@
 
       const observer = new IntersectionObserver(entries => {
         if (entries[0].isIntersecting) {
-          new countUp.CountUp('counter-projects', 20).start();
-          new countUp.CountUp('counter-clients', 8).start();
-          new countUp.CountUp('counter-hours', 500).start();
-          new countUp.CountUp('counter-coffee', 150).start();
+          new countUp.CountUp('counter-projects', 0).start();
+          new countUp.CountUp('counter-clients', 0).start();
+          new countUp.CountUp('counter-hours', 0).start();
+          new countUp.CountUp('counter-coffee', 0).start();
           observer.disconnect();
         }
       }, { threshold: 0.5 });
