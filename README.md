@@ -1,53 +1,30 @@
-# 🚀 Lucky Joshi – Frontend Developer Portfolio
+# Lucky Joshi – Frontend Developer Portfolio
 
-A sleek, responsive, and Gen-Z-friendly portfolio website showcasing my skills, projects, and experience as a modern frontend developer. Built with **HTML5**, **Tailwind CSS**, and **JavaScript**, this portfolio blends smooth animations, elegant theming, and smart interactivity — perfect for dev branding and freelance outreach.
+A modern and responsive portfolio website to showcase my skills, projects, and experience as a frontend developer.
 
----
+## 🚀 Features
 
-## 🌟 Features
+- Clean UI with Tailwind CSS
+- Dark/Light Mode toggle
+- Smooth scroll animations
+- Animated role text (Typed.js)
+- Stats counter on scroll (CountUp.js)
+- Responsive layout for all devices
+- Resume download & contact section
 
-- ⚡ Fully responsive & mobile-first layout  
-- 🌙 Light/Dark mode toggle with theme memory  
-- 🎯 Typed.js animated role intro  
-- 📈 Scroll-triggered stats with CountUp.js  
-- ✨ AOS-powered scroll animations  
-- 📄 Resume download button  
-- 🧑‍💻 Project cards linked to live demos  
-- 🔗 Contact section with email & form
+## 💻 Tech Stack
 
----
-
-## 🛠 Tech Stack
-
-- **HTML5**
-- **Tailwind CSS**
-- **Vanilla JavaScript**
-- [Typed.js](https://github.com/mattboldt/typed.js/)
-- [CountUp.js](https://inorganik.github.io/countUp.js/)
-- [AOS – Animate on Scroll](https://michalsnik.github.io/aos/)
-
----
+- HTML5
+- Tailwind CSS
+- JavaScript (Vanilla)
+- Typed.js
+- CountUp.js
+- AOS (Animate on Scroll)
 
 ## 🔗 Live Demo
 
-👉 [https://luckyjoshiportfoliopage.netlify.app](https://luckyjoshiportfoliopage.netlify.app)
-
----
-
-## 👤 About Me
-
-**Lucky Joshi**  
-Frontend Developer · UI/UX Enthusiast · Content Creator  
-📧 [luckyjoshi524@gmail.com](mailto:luckyjoshi524@gmail.com)  
-🔗 [LinkedIn](https://linkedin.com/in/lucky-joshi)
-
----
+👉 [Visit Portfolio](https://luckyjoshiportfoliopage.netlify.app)
 
 ## 📄 License
 
-This project is open-sourced under the **MIT License**.  
-Fork it, customize it, ship your own style.
-
----
-
-> ✨ Built with clean code, cool design, and lots of ☕.
+This project is open source under the [MIT License](https://opensource.org/licenses/MIT).
