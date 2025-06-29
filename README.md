@@ -2,6 +2,11 @@
 
 A modern and responsive portfolio website to showcase my skills, projects, and experience as a frontend developer.
 
+## 📸 Preview
+
+![Lucky Portfolio Preview](./preview.png)
+
+
 ## 🚀 Features
 
 - Clean UI with Tailwind CSS
