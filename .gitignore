@@ -1,0 +1,10 @@
+.vscode 
+settings.json
+history/
+*.code-workspace
+*.log
+*.tmp   
+.DS_Store
+node_modules/
+dist/
+.env
