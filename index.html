@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lucky Joshi | Frontend Developer</title>
+    <title>Lucky Joshi | MERN Developer</title>
     
-    <meta name="description" content="Portfolio website of Lucky Joshi – Frontend Developer skilled in HTML, CSS, JS, Tailwind, and more." />
-    <meta property="og:description" content="Portfolio site of Lucky Joshi." />
+    <meta name="description" content="Lucky Joshi's developer portfolio with a hacker-dashboard aesthetic." />
+    <meta property="og:description" content="Lucky Joshi's developer portfolio with a hacker-dashboard aesthetic." />
     <meta property="og:image" content="/preview.jpg" />
     <meta property="og:url" content="https://luckyjoshiportfoliopage.netlify.app" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -14,98 +14,201 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.0.7/dist/countUp.umd.js"></script>
 
     <script>
       tailwind.config = {
-        darkMode: 'class',
+        darkMode: 'class', // Using class strategy for dark mode
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif']
+              mono: ['Roboto Mono', 'monospace']
             },
             colors: {
-              primary: '#6366f1',
-              accent: '#14b8a6'
+              primary: '#00ff88', // Neon Green
+              secondary: '#ffff55', // Neon Yellow
+              accent1: '#ff00ff', // Magenta
+              accent2: '#00ffff', // Cyan
+              darkbg: '#0a0e27', // Deep dark blue-black
+              'code-comment': '#666699',
+              'code-string': '#ff88ff',
+              'code-keyword': '#ffff55',
             },
             boxShadow: {
-              glass: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
-            },
-            backdropBlur: {
-              sm: '4px'
+              glow: '0 0 20px rgba(0, 255, 136, 0.1)',
+              'glow-md': '0 0 20px rgba(0, 255, 136, 0.3)',
+              'glow-lg': '0 0 30px rgba(0, 255, 136, 0.5)',
             }
           }
         }
       };
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <style>
-      /* Additional styles for interactive features */
-      .project-filter-btn {
-        padding: 0.5rem 1rem;
-        border-radius: 9999px;
-        transition: all 0.3s ease;
-        border: 1px solid transparent;
+    <style>
+      html {
+        scroll-behavior: smooth;
       }
-      .project-filter-btn.active {
-        background-color: #3B82F6;
-        color: white;
-        border-color: #3B82F6;
+      body {
+        background-color: #0a0e27;
+        color: #00ff88;
+        font-family: 'Roboto Mono', monospace;
+        letter-spacing: 0.05em;
       }
-      .project-card {
-        transition: transform 0.3s ease, opacity 0.5s ease;
-        display: block;
+      ::selection {
+        background: #ff00ff;
+        color: #0a0e27;
       }
-      .project-card.hidden {
-        transform: scale(0.9);
-        opacity: 0;
-        display: none;
+      .glitch-text {
+        position: relative;
+        color: #00ff88;
+      }
+      .glitch-text::before, .glitch-text::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #0a0e27;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+      }
+      .glitch-text::before {
+        left: 2px;
+        text-shadow: -2px 0 #ff00ff;
+        animation: glitch-anim-1 2s infinite linear alternate-reverse;
+      }
+      .glitch-text::after {
+        left: -2px;
+        text-shadow: -2px 0 #00ffff, 2px 2px #ff00ff;
+        animation: glitch-anim-2 1s infinite linear alternate-reverse;
+      }
+      @keyframes glitch-anim-1 {
+        0% { clip: rect(42px, 9999px, 44px, 0); }
+        10% { clip: rect(12px, 9999px, 60px, 0); }
+        20% { clip: rect(50px, 9999px, 10px, 0); }
+        30% { clip: rect(25px, 9999px, 70px, 0); }
+        40% { clip: rect(65px, 9999px, 35px, 0); }
+        50% { clip: rect(48px, 9999px, 52px, 0); }
+        60% { clip: rect(30px, 9999px, 65px, 0); }
+        70% { clip: rect(10px, 9999px, 80px, 0); }
+        80% { clip: rect(75px, 9999px, 20px, 0); }
+        90% { clip: rect(5px, 9999px, 45px, 0); }
+        100% { clip: rect(58px, 9999px, 38px, 0); }
+      }
+      @keyframes glitch-anim-2 {
+        0% { clip: rect(80px, 9999px, 100px, 0); }
+        10% { clip: rect(20px, 9999px, 70px, 0); }
+        20% { clip: rect(90px, 9999px, 5px, 0); }
+        30% { clip: rect(40px, 9999px, 75px, 0); }
+        40% { clip: rect(15px, 9999px, 85px, 0); }
+        50% { clip: rect(60px, 9999px, 40px, 0); }
+        60% { clip: rect(25px, 9999px, 90px, 0); }
+        70% { clip: rect(70px, 9999px, 30px, 0); }
+        80% { clip: rect(45px, 9999px, 60px, 0); }
+        90% { clip: rect(95px, 9999px, 15px, 0); }
+        100% { clip: rect(35px, 9999px, 80px, 0); }
+      }
+      .scan-lines {
+        background: repeating-linear-gradient(
+          0deg,
+          rgba(0, 255, 136, 0.03) 0px,
+          rgba(0, 255, 136, 0.03) 1px,
+          transparent 1px,
+          transparent 2px
+        );
+      }
+      .status-indicator {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background: #00ff88;
+        border-radius: 50%;
+        animation: pulse-glow 1s infinite;
+      }
+      @keyframes pulse-glow {
+        0%, 100% { box-shadow: 0 0 10px #00ff88; }
+        50% { box-shadow: 0 0 20px #00ff88; }
+      }
+      .cursor {
+        display: inline-block;
+        width: 2px;
+        height: 1em;
+        background: #00ff88;
+        animation: blink 1s infinite;
+        vertical-align: middle;
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
       }
       nav a.active {
-        border-bottom: 2px solid #6366f1;
-        color: #6366f1;
+        text-shadow: 0 0 5px #00ff88;
+        color: #00ff88;
       }
     </style>
   </head>
-  <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans transition-colors duration-300">
-    <a href="#contact" class="fixed bottom-6 right-6 z-50 bg-primary text-white px-4 py-2 rounded-full shadow-lg hover:scale-105 transition">Hire Me 💼</a>
+  <body class="dark">
+    <a href="#contact" class="fixed bottom-6 right-6 z-50 bg-primary text-darkbg px-4 py-2 rounded-md border border-primary shadow-glow-md hover:scale-105 hover:shadow-glow-lg transition-all duration-300">root@lucky:~# hire-me</a>
 
     <!-- Header -->
-    <header class="sticky top-0 z-50 backdrop-blur-sm bg-white/80 dark:bg-gray-900/80 shadow-glass">
+    <header class="sticky top-0 z-50 bg-darkbg/80 backdrop-blur-sm border-b border-primary/20">
       <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        <h1 class="text-xl font-bold text-primary">Lucky Joshi</h1>
-        <nav class="space-x-4 text-sm">
-          <a href="#home" class="hover:text-primary">Home</a>
-          <a href="#about" class="hover:text-primary">About</a>
-          <a href="#skills" class="hover:text-primary">Skills</a>
-          <a href="#projects" class="hover:text-primary">Projects</a>
-          <a href="#experience" class="hover:text-primary">Experience</a>
-          <a href="#contact" class="hover:text-primary">Contact</a>
-          <button id="toggleTheme" class="ml-4 border px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition">🌓</button>
+        <h1 class="text-xl font-bold text-primary glitch-text" data-text="LuckyJoshi">LuckyJoshi</h1>
+        <nav class="hidden md:flex space-x-6 text-sm">
+          <a href="#home" class="hover:text-primary hover:scale-105 transition-all">/home</a>
+          <a href="#about" class="hover:text-primary hover:scale-105 transition-all">/about</a>
+          <a href="#skills" class="hover:text-primary hover:scale-105 transition-all">/skills</a>
+          <a href="#projects" class="hover:text-primary hover:scale-105 transition-all">/projects</a>
+          <a href="#experience" class="hover:text-primary hover:scale-105 transition-all">/experience</a>
+          <a href="#contact" class="hover:text-primary hover:scale-105 transition-all">/contact</a>
+        </nav>
+        <button id="mobile-menu-btn" class="md:hidden text-primary text-2xl">☰</button>
+      </div>
+       <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-darkbg/95 backdrop-blur-sm">
+        <nav class="flex flex-col items-center space-y-4 py-4 text-lg">
+          <a href="#home" class="hover:text-primary">/home</a>
+          <a href="#about" class="hover:text-primary">/about</a>
+          <a href="#skills" class="hover:text-primary">/skills</a>
+          <a href="#projects" class="hover:text-primary">/projects</a>
+          <a href="#experience" class="hover:text-primary">/experience</a>
+          <a href="#contact" class="hover:text-primary">/contact</a>
         </nav>
       </div>
     </header>
 
     <!-- Home Section -->
-    <section id="home" class="h-screen flex flex-col items-center justify-center text-center bg-gradient-to-br from-blue-100 to-purple-200 dark:from-gray-800 dark:to-gray-900" data-aos="fade-up">
-      <div class="p-10 rounded-2xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5">
-        <h2 class="text-4xl sm:text-5xl font-extrabold text-primary mb-4">Hey, I’m Lucky 👋</h2>
-        <span id="typed-text" class="text-xl text-accent font-semibold"></span>
-        <div class="mt-6 space-x-4">
-          <a href="#contact" class="inline-block px-6 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Let’s Collaborate</a>
-          <a href="resume.html" target="_blank" class="inline-block px-6 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">Download Resume</a>
+    <section id="home" class="h-screen flex items-center justify-center text-center p-4 scan-lines" data-aos="fade-in">
+      <div class="w-full max-w-3xl mx-auto border border-primary/50 rounded-lg shadow-glow-md bg-darkbg/70 backdrop-blur-sm">
+        <div class="terminal-header bg-gray-800/50 p-2 flex items-center rounded-t-lg border-b border-primary/20">
+          <span class="dot w-3 h-3 bg-red-500 rounded-full mr-2"></span>
+          <span class="dot w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
+          <span class="dot w-3 h-3 bg-green-500 rounded-full"></span>
+          <span class="flex-grow text-center text-xs text-gray-400">/bin/bash -- lucky.joshi</span>
+        </div>
+        <div class="p-6 text-left font-mono text-sm sm:text-base">
+          <div id="terminal-code"></div>
+          <div class="mt-4">
+            <span class="text-primary">status:</span>
+            <span class="status-indicator"></span>
+            <span class="text-green-400"> ONLINE</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- About -->
-    <section id="about" class="py-20 px-6 max-w-4xl mx-auto" data-aos="fade-up">
-      <div class="bg-white/10 dark:bg-white/5 shadow-glass backdrop-blur-sm p-10 rounded-2xl">
-        <h3 class="text-3xl font-bold mb-4 text-primary">About Me</h3>
-        <p class="text-lg leading-relaxed">
-          I'm Lucky Joshi, a MERN Developer blending clean code with sleek designs. Whether it's crafting pixel-perfect UIs or diving into data with Python and MySQL, I bring projects to life with creativity and precision.
+    <section id="about" class="py-20 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto border border-primary/30 p-8 rounded-lg shadow-glow scan-lines">
+        <h3 class="text-3xl font-bold mb-4 glitch-text" data-text="[ About Me ]">[ About Me ]</h3>
+        <p class="leading-relaxed">
+          <span class="text-code-keyword">const</span> <span class="text-primary">lucky</span> = { <br>
+          &nbsp;&nbsp;<span class="text-code-string">'description'</span>: <span class="text-code-string">'A MERN Developer blending clean code with sleek, hacker-inspired designs.'</span>, <br>
+          &nbsp;&nbsp;<span class="text-code-string">'passion'</span>: <span class="text-code-string">'Crafting pixel-perfect UIs and diving deep into data with Python and MySQL.'</span>, <br>
+          &nbsp;&nbsp;<span class="text-code-string">'mission'</span>: <span class="text-code-string">'Bringing projects to life with creativity, precision, and a touch of neon.'</span> <br>
+          };
         </p>
       </div>
     </section>
@@ -113,77 +216,53 @@
     <!-- Skills -->
     <section id="skills" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-5xl mx-auto">
-        <h3 class="text-3xl font-bold mb-10 text-center text-primary">Skills</h3>
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Frontend -->
-          <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass">
-            <h4 class="text-xl font-bold mb-4 text-accent">Frontend</h4>
-            <div class="space-y-4">
-              <div>
-                <p>React</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div></div>
-              </div>
-              <div>
-                <p>JavaScript</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div></div>
-              </div>
-              <div>
-                <p>Tailwind CSS</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 88%"></div></div>
-              </div>
-              <div>
-                <p>CSS3</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div>
-              </div>
-            </div>
+        <h3 class="text-3xl font-bold mb-10 text-center glitch-text" data-text="[ Skill Matrix ]">[ Skill Matrix ]</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="React">
+            <h4 class="font-bold">React</h4>
+            <p class="text-secondary text-sm">95%</p>
           </div>
-          <!-- Backend -->
-          <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass">
-            <h4 class="text-xl font-bold mb-4 text-accent">Backend</h4>
-            <div class="space-y-4">
-              <div>
-                <p>Node.js</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div>
-              </div>
-              <div>
-                <p>Express</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div></div>
-              </div>
-              <div>
-                <p>MongoDB</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 82%"></div></div>
-              </div>
-              <div>
-                <p>MySQL</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 78%"></div></div>
-              </div>
-            </div>
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="JavaScript">
+            <h4 class="font-bold">JavaScript</h4>
+            <p class="text-secondary text-sm">90%</p>
           </div>
-          <!-- Tools & Languages -->
-          <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass">
-            <h4 class="text-xl font-bold mb-4 text-accent">Tools & Languages</h4>
-            <div class="space-y-4">
-              <div>
-                <p>Python</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div></div>
-              </div>
-              <div>
-                <p>Git & GitHub</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div></div>
-              </div>
-              <div>
-                <p>Prisma</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div></div>
-              </div>
-               <div>
-                <p>C++</p>
-                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 65%"></div></div>
-              </div>
-            </div>
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="Node.js">
+            <h4 class="font-bold">Node.js</h4>
+            <p class="text-secondary text-sm">85%</p>
           </div>
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="MongoDB">
+            <h4 class="font-bold">MongoDB</h4>
+            <p class="text-secondary text-sm">82%</p>
+          </div>
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="Tailwind">
+            <h4 class="font-bold">Tailwind CSS</h4>
+            <p class="text-secondary text-sm">88%</p>
+          </div>
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="Python">
+            <h4 class="font-bold">Python</h4>
+            <p class="text-secondary text-sm">75%</p>
+          </div>
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="Git">
+            <h4 class="font-bold">Git & GitHub</h4>
+            <p class="text-secondary text-sm">92%</p>
+          </div>
+          <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="MySQL">
+            <h4 class="font-bold">MySQL</h4>
+            <p class="text-secondary text-sm">78%</p>
+          </div>
+
         </div>
       </div>
     </section>
+
+    <style>
+      .skill-cell.active {
+        border-width: 2px;
+        background: rgba(0, 255, 136, 0.15);
+        box-shadow: 0 0 15px rgba(0, 255, 136, 0.5);
+      }
+    </style>
 
     <!-- Projects -->
     <section id="projects" class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
@@ -264,354 +343,298 @@
       </div>
     </section>
 
-    <!-- Experience -->
+    <!-- GitHub Activity Stream -->
     <section id="experience" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-4xl mx-auto">
-        <h3 class="text-3xl font-bold mb-12 text-center text-primary">Experience</h3>
-        <div class="relative border-l-2 border-primary/30">
-          <!-- Timeline Item -->
-          <div class="mb-8 ml-6">
-            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
-              <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M20 7.5a.5.5 0 00-.5-.5h-3.793L12.5 2.293a.5.5 0 00-.707 0L8.5 5.5H4.707a.5.5 0 000 1H8.5l3.293 3.293a.5.5 0 00.707 0L15.793 6.5H20a.5.5 0 00.5-.5zM4.5 12.5a.5.5 0 00.5.5h3.793l3.207 3.207a.5.5 0 00.707 0L16.5 13h3.793a.5.5 0 000-1H16.5l-3.293-3.293a.5.5 0 00-.707 0L9.207 12.5H4.5a.5.5 0 00-.5.5z"/></svg>
-            </span>
-            <div class="p-6 rounded-xl shadow-glass bg-white/10 dark:bg-white/5">
-              <h4 class="text-xl font-semibold text-accent">Freelance Web Developer</h4>
-              <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Jan 2023 – Present</p>
-              <ul class="list-disc list-inside text-sm space-y-1">
-                <li>Built 12+ responsive web applications for various startups, enhancing their digital presence.</li>
-                <li>Improved average client site speed by 45% through performance optimization techniques.</li>
-                <li>Led frontend architecture for 3 full-stack MERN projects from conception to deployment.</li>
-                <li>Maintained a 95% client satisfaction rate based on feedback and project success.</li>
-              </ul>
-            </div>
+        <h3 class="text-3xl font-bold mb-12 text-center glitch-text" data-text="[ Git Log ]">[ Git Log ]</h3>
+        <div class="p-6 border border-primary/30 rounded-lg shadow-glow scan-lines font-mono text-sm">
+          <div id="git-log" class="space-y-2">
+            <!-- Commits will be injected by JS -->
+            <p><span class="text-green-400">● feat:</span> DevFlow Kanban boards integration</p>
+            <p><span class="text-yellow-400">● fix:</span> React memo optimization for performance</p>
+            <p><span class="text-blue-400">● docs:</span> Updated README and API documentation</p>
+            <p><span class="text-purple-400">● refactor:</span> Database query performance +45%</p>
+            <p><span class="text-cyan-400">● test:</span> Added unit tests for auth middleware</p>
+            <p><span class="text-green-400">● feat:</span> Implemented AI-powered quiz generation in Mentixo</p>
+            <p><span class="text-yellow-400">● fix:</span> Patched security vulnerability in user session handling</p>
           </div>
-          <!-- Add more timeline items here -->
         </div>
       </div>
     </section>
 
-    <!-- Interactive Comparison Table -->
-    <section id="comparison" class="py-20 px-6" data-aos="fade-up">
+    <!-- Performance Metrics -->
+    <section id="performance" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-10 text-primary">Skills vs. Requirements</h3>
-        <div class="overflow-x-auto">
-          <table class="min-w-full bg-white/10 dark:bg-white/5 shadow-glass rounded-2xl">
-            <thead>
-              <tr class="bg-white/20 dark:bg-white/10">
-                <th class="p-4 text-left">Skill</th>
-                <th class="p-4 text-left">Your Level</th>
-                <th class="p-4 text-left">Required</th>
-                <th class="p-4 text-left">Match</th>
-              </tr>
-            </thead>
-            <tbody id="comparison-body">
-              <!-- Rows will be inserted by JavaScript -->
-            </tbody>
-          </table>
+        <h3 class="text-3xl font-bold mb-10 glitch-text" data-text="[ Live Performance Metrics ]">[ Live Performance Metrics ]</h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
+          <div class="metric-card">
+            <p>Lighthouse Score</p>
+            <div class="progress-bar"><div class="progress" style="width: 92%;"></div></div>
+            <p class="score">92/100</p>
+          </div>
+          <div class="metric-card">
+            <p>Page Load Time</p>
+            <div class="progress-bar"><div class="progress" style="width: 88%;"></div></div>
+            <p class="score">1.2s</p>
+          </div>
+          <div class="metric-card">
+            <p>React Bundle Size</p>
+            <div class="progress-bar"><div class="progress" style="width: 95%;"></div></div>
+            <p class="score">45.2 KB</p>
+          </div>
+          <div class="metric-card">
+            <p>SEO Score</p>
+            <div class="progress-bar"><div class="progress" style="width: 98%;"></div></div>
+            <p class="score">98/100</p>
+          </div>
+          <div class="metric-card">
+            <p>Accessibility</p>
+            <div class="progress-bar"><div class="progress" style="width: 96%;"></div></div>
+            <p class="score">96/100</p>
+          </div>
+          <div class="metric-card">
+            <p>Mobile Friendliness</p>
+            <div class="progress-bar"><div class="progress" style="width: 100%;"></div></div>
+            <p class="score">100%</p>
+          </div>
         </div>
       </div>
     </section>
+    <style>
+      .metric-card {
+        border: 1px solid #00ff88/50;
+        padding: 1rem;
+        border-radius: 8px;
+        background: #0a0e27/50;
+        transition: all 0.3s;
+      }
+      .metric-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
+      }
+      .progress-bar {
+        width: 100%;
+        height: 8px;
+        background: #333;
+        border-radius: 4px;
+        margin: 0.5rem 0;
+        overflow: hidden;
+      }
+      .progress {
+        height: 100%;
+        background: #00ff88;
+        border-radius: 4px;
+        box-shadow: 0 0 5px #00ff88;
+      }
+      .score {
+        font-size: 0.9rem;
+        color: #ffff55;
+      }
+    </style>
 
     <!-- Contact -->
     <section id="contact" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-2xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-6 text-primary">Get In Touch</h3>
+        <h3 class="text-3xl font-bold mb-6 glitch-text" data-text="[ Get In Touch ]">[ Get In Touch ]</h3>
         <p class="mb-8">I'm currently available for freelance work and open to new opportunities. Let's build something amazing together.</p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <a href="mailto:lucky.joshi@example.com" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 bg-primary text-white rounded-md hover:bg-indigo-600 transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 font-mono">
+          <a href="mailto:lucky.joshi@example.com" class="w-full sm:w-auto px-6 py-3 bg-primary text-darkbg rounded-md border border-primary shadow-glow-md hover:shadow-glow-lg transition-all duration-300">
             Get in Touch
           </a>
-          <a href="resume.html" target="_blank" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+          <a href="resume.html" target="_blank" class="w-full sm:w-auto px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-darkbg transition-all duration-300">
             Download Resume
           </a>
-          <a href="https://github.com/luckyjoshi" target="_blank" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0020 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+          <a href="https://github.com/luckyjoshi" target="_blank" class="w-full sm:w-auto px-6 py-3 border border-primary/50 text-primary/80 rounded-md hover:bg-primary hover:text-darkbg hover:border-primary transition-all duration-300">
             View GitHub
           </a>
         </div>
       </div>
     </section>
-
-    <footer class="text-center text-sm text-gray-500 dark:text-gray-400 py-6">
-      &copy; 2026 Lucky Joshi. All rights reserved.
+    <style>
+      .form-input {
+        width: 100%;
+        background: transparent;
+        border: 1px solid #00ff88/50;
+        padding: 0.75rem;
+        border-radius: 4px;
+        color: #00ff88;
+        transition: all 0.3s;
+      }
+      .form-input:focus {
+        outline: none;
+        border-color: #00ff88;
+        box-shadow: 0 0 10px rgba(0, 255, 136, 0.3);
+      }
+    </style>
+    
+    <footer class="text-center text-xs text-gray-500 py-6 border-t border-primary/10">
+      &copy; 2026 Lucky Joshi. All systems operational.
     </footer>
 
-    <!-- Modal for Project Details -->
-    <div id="project-modal" class="modal">
-      <div class="modal-backdrop" onclick="closeModal('project-modal')"></div>
-      <div class="modal-content">
-        <button class="modal-close" onclick="closeModal('project-modal')">×</button>
-        <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
-        <p id="modal-description"></p>
-        <a id="modal-link" href="#" target="_blank" class="inline-block mt-4 px-4 py-2 bg-accent text-white rounded-md">View Project</a>
+    <!-- Command Palette -->
+    <div id="command-palette" class="hidden fixed inset-0 z-50 items-center justify-center bg-darkbg/80 backdrop-blur-sm">
+      <div class="w-full max-w-lg border border-primary/50 rounded-lg shadow-glow-lg bg-darkbg scan-lines">
+        <div class="p-4">
+          <input id="command-input" type="text" class="w-full bg-transparent text-primary focus:outline-none" placeholder="> Enter command (e.g., help)...">
+        </div>
+        <div id="command-output" class="p-4 border-t border-primary/20 h-48 overflow-y-auto text-sm">
+          <p>Type 'help' to see available commands.</p>
+        </div>
       </div>
     </div>
-
+    
     <!-- Toast Notification -->
-    <div id="toast" class="fixed bottom-10 right-10 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg opacity-0 transition-opacity duration-300">
-      Message sent successfully!
+    <div id="toast" class="fixed bottom-10 right-10 bg-primary text-darkbg px-6 py-3 rounded-lg shadow-glow-lg opacity-0 transition-opacity duration-300">
+      <!-- Message here -->
     </div>
-
+    
     <script>
       AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });
 
-      const toggleBtn = document.getElementById('toggleTheme');
-      const html = document.documentElement;
-      const darkPref = localStorage.getItem('theme');
-      if (darkPref === 'dark') html.classList.add('dark');
-
-      toggleBtn.addEventListener('click', () => {
-        html.classList.toggle('dark');
-        localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+      // Mobile Menu Toggle
+      document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+        document.getElementById('mobile-menu').classList.toggle('hidden');
       });
 
-      new Typed('#typed-text', {
-        strings: [
-          'MERN Stack Developer 💻',
-          'Open Source Contributor 🌍',
-          'UI/UX Enthusiast 🎨',
-          'Coder & Creator 🚀'
-        ],
-        typeSpeed: 60, // Speed of typing
-        backSpeed: 30, // Speed of backspacing
-        backDelay: 2000, // Time before starting to backspace
-        loop: true
-      });
+      // Terminal Typing Animation
+      const codeLines = [
+        '<span class="text-code-keyword">const</span> <span class="text-accent2">developer</span> = {',
+        '  <span class="text-code-string">name</span>: <span class="text-code-string">"Lucky Joshi"</span>,',
+        '  <span class="text-code-string">title</span>: <span class="text-code-string">"MERN Stack Developer"</span>,',
+        '  <span class="text-code-string">skills</span>: [<span class="text-code-string">"React"</span>, <span class="text-code-string">"Node.js"</span>, <span class="text-code-string">"MongoDB"</span>, <span class="text-code-string">"Python"</span>],',
+        '};<span class="cursor"></span>'
+      ];
+      let currentLine = 0;
+      let currentChar = 0;
+      const terminalCode = document.getElementById('terminal-code');
 
-      const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting) {
-          new countUp.CountUp('counter-projects', 20).start();
-          new countUp.CountUp('counter-clients', 0).start();
-          new countUp.CountUp('counter-hours', 100).start();
-          new countUp.CountUp('counter-coffee', 10).start();
-          observer.disconnect();
-        }
-      }, { threshold: 0.5 });
-
-      observer.observe(document.getElementById('stats'));
-
-      // --- INTERACTIVE FEATURES SCRIPT ---
-
-      document.addEventListener('DOMContentLoaded', () => {
-        
-        // --- 1. SKILL MATCHER ---
-        const skillBadges = document.querySelectorAll('.skill-badge');
-        const projects = document.querySelectorAll('.project-card');
-        const projectCount = document.getElementById('project-count');
-        const clearFiltersBtn = document.getElementById('clear-filters-btn');
-        let selectedSkills = [];
-
-        const projectsData = Array.from(projects).map(p => ({
-            element: p,
-            skills: JSON.parse(p.dataset.skills || '[]').map(s => s.toLowerCase())
-        }));
-
-        skillBadges.forEach(badge => {
-          badge.addEventListener('click', () => {
-            const skill = badge.dataset.skill.toLowerCase();
-            badge.classList.toggle('selected');
-            
-            if (selectedSkills.includes(skill)) {
-              selectedSkills = selectedSkills.filter(s => s !== skill);
-            } else {
-              selectedSkills.push(skill);
-            }
-            filterProjects();
-          });
-        });
-
-        function filterProjects() {
-          let count = 0;
-          projectsData.forEach(project => {
-            const isVisible = selectedSkills.length === 0 || selectedSkills.every(skill => project.skills.includes(skill));
-            project.element.style.display = isVisible ? 'block' : 'none';
-            if(isVisible) count++;
-          });
-          
-          if (selectedSkills.length > 0) {
-            projectCount.textContent = `Showing ${count} project(s) with: ${selectedSkills.join(', ')}`;
-            clearFiltersBtn.classList.remove('hidden');
+      function typeLine() {
+        if (currentLine < codeLines.length) {
+          if (currentChar < codeLines[currentLine].length) {
+            terminalCode.innerHTML = codeLines.slice(0, currentLine).join('<br>') + '<br>' + codeLines[currentLine].substring(0, currentChar + 1);
+            currentChar++;
+            setTimeout(typeLine, 20);
           } else {
-            projectCount.textContent = '';
-            clearFiltersBtn.classList.add('hidden');
+            currentChar = 0;
+            currentLine++;
+            setTimeout(typeLine, 200);
           }
         }
+      }
+      typeLine();
 
-        clearFiltersBtn.addEventListener('click', () => {
-          selectedSkills = [];
-          skillBadges.forEach(badge => badge.classList.remove('selected'));
-          filterProjects();
+      // Skill Matrix Interaction
+      document.querySelectorAll('.skill-cell').forEach(cell => {
+        cell.addEventListener('click', () => {
+          cell.classList.toggle('active');
         });
+      });
 
-        // --- 2. PROJECT CAROUSEL (Simplified for this implementation) ---
-        // Full carousel would require a library or more complex setup.
-        // This example shows how to open project details in a modal.
-        projects.forEach(project => {
-            project.addEventListener('click', (e) => {
-                e.preventDefault();
-                const title = project.querySelector('h4').textContent;
-                const description = project.querySelector('p').textContent;
-                const link = project.href;
-
-                document.getElementById('modal-title').textContent = title;
-                document.getElementById('modal-description').textContent = description;
-                document.getElementById('modal-link').href = link;
-                openModal('project-modal');
+      // Scroll Spy
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('nav a');
+      const observerOptions = { root: null, rootMargin: '0px', threshold: 0.6 };
+      const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.hash === `#${id}`) {
+                link.classList.add('active');
+              }
             });
+          }
         });
+      }, observerOptions);
+      sections.forEach(section => sectionObserver.observe(section));
 
+      // Command Palette
+      const commandPalette = document.getElementById('command-palette');
+      const commandInput = document.getElementById('command-input');
+      const commandOutput = document.getElementById('command-output');
 
-        // --- 5. ACCORDION ---
-        const accordionHeaders = document.querySelectorAll('.accordion-header');
-        accordionHeaders.forEach(header => {
-          header.addEventListener('click', () => {
-            const content = header.nextElementSibling;
-            const isOpen = header.classList.contains('open');
-
-            // Optional: Close all others
-            accordionHeaders.forEach(h => {
-              h.classList.remove('open');
-              h.nextElementSibling.style.maxHeight = null;
-            });
-
-            if (!isOpen) {
-              header.classList.add('open');
-              content.style.maxHeight = content.scrollHeight + "px";
-            }
-          });
-        });
-
-        // --- 7. INTERACTIVE CONTACT FORM ---
-        const contactForm = document.getElementById('contact-form');
-        const formInputs = document.querySelectorAll('#contact-form .form-input');
-
-        formInputs.forEach(input => {
-            input.addEventListener('input', () => {
-                validateInput(input);
-            });
-        });
-
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            let isFormValid = true;
-            formInputs.forEach(input => {
-                if (!validateInput(input)) {
-                    isFormValid = false;
-                }
-            });
-
-            if (isFormValid) {
-                const formData = new FormData(contactForm);
-                fetch(contactForm.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        showToast('Message sent successfully!');
-                        contactForm.reset();
-                        formInputs.forEach(input => {
-                           input.classList.remove('success', 'error');
-                        });
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                showToast(data["errors"].map(error => error["message"]).join(", "));
-                            } else {
-                                showToast('Oops! There was a problem submitting your form');
-                            }
-                        })
-                    }
-                }).catch(error => {
-                    showToast('Oops! There was a problem submitting your form');
-                });
-            }
-        });
-
-        function validateInput(input) {
-            let isValid = input.checkValidity();
-            if (input.type === 'email') {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                isValid = emailRegex.test(input.value);
-            }
-            
-            input.classList.toggle('success', isValid);
-            input.classList.toggle('error', !isValid);
-            return isValid;
+      document.addEventListener('keydown', (e) => {
+        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+          e.preventDefault();
+          commandPalette.classList.toggle('hidden');
+          commandPalette.classList.toggle('flex');
+          if (!commandPalette.classList.contains('hidden')) {
+            commandInput.focus();
+          }
         }
-
-        // --- 8. INTERACTIVE COMPARISON TABLE ---
-        const comparisonData = [
-          { skill: 'React', yours: 'Expert', required: 'Advanced', match: 'exceed' },
-          { skill: 'JavaScript', yours: 'Expert', required: 'Expert', match: 'meets' },
-          { skill: 'Node.js', yours: 'Advanced', required: 'Advanced', match: 'meets' },
-          { skill: 'MongoDB', yours: 'Advanced', required: 'Intermediate', match: 'exceed' },
-          { skill: 'Python', yours: 'Intermediate', required: 'Intermediate', match: 'meets' },
-          { skill: 'SQL', yours: 'Intermediate', required: 'Advanced', match: 'missing' }
-        ];
-        const comparisonBody = document.getElementById('comparison-body');
-        comparisonData.forEach(item => {
-          const row = document.createElement('tr');
-          let matchCell = '';
-          if(item.match === 'exceed') matchCell = '<td class="p-4 text-green-500">✓ Exceeds</td>';
-          else if(item.match === 'meets') matchCell = '<td class="p-4 text-yellow-500">✓ Meets</td>';
-          else matchCell = '<td class="p-4 text-red-500">✗ Needs Work</td>';
-
-          row.innerHTML = `
-            <td class="p-4">${item.skill}</td>
-            <td class="p-4">${item.yours}</td>
-            <td class="p-4">${item.required}</td>
-            ${matchCell}
-          `;
-          row.classList.add('hover:bg-white/20', 'dark:hover:bg-white/10', 'transition-colors');
-          comparisonBody.appendChild(row);
-        });
-
-        // --- 9. SCROLL SPY NAVIGATION ---
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('nav a');
-        
-        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
-        const sectionObserver = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const id = entry.target.id;
-                    navLinks.forEach(link => {
-                        link.classList.toggle('active', link.hash === `#${id}`);
-                    });
-                }
-            });
-        }, observerOptions);
-
-        sections.forEach(section => sectionObserver.observe(section));
-
-        // --- 10. MODAL DIALOGS & POPUPS ---
-        window.openModal = (modalId) => {
-            document.getElementById(modalId).classList.add('open');
-        }
-        window.closeModal = (modalId) => {
-            document.getElementById(modalId).classList.remove('open');
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.modal.open').forEach(modal => closeModal(modal.id));
-            }
-        });
-
-        // --- 12. TOAST NOTIFICATIONS ---
-        window.showToast = (message) => {
-            const toast = document.getElementById('toast');
-            toast.textContent = message;
-            toast.style.opacity = 1;
-            setTimeout(() => {
-                toast.style.opacity = 0;
-            }, 3000);
+        if (e.key === 'Escape' && !commandPalette.classList.contains('hidden')) {
+          commandPalette.classList.add('hidden');
+          commandPalette.classList.remove('flex');
         }
       });
+
+      commandInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const command = commandInput.value.trim().toLowerCase();
+          commandInput.value = '';
+          executeCommand(command);
+        }
+      });
+
+      function executeCommand(command) {
+        let output = `<p class="text-gray-500">> ${command}</p>`;
+        switch (command) {
+          case 'help':
+            output += `<p>Available: portfolio | projects | contact | resume | skills | status</p>`;
+            break;
+          case 'projects':
+            output += `<p>Loading 12 projects... Navigating to projects section.</p>`;
+            window.location.hash = 'projects';
+            break;
+          case 'contact':
+            output += `<p>Opening contact form... Navigating to contact section.</p>`;
+            window.location.hash = 'contact';
+            break;
+          case 'resume':
+            output += `<p>Downloading resume.pdf...</p>`;
+            window.open('resume.html', '_blank');
+            break;
+          case 'skills':
+            output += `<p>Displaying skill matrix... Navigating to skills section.</p>`;
+            window.location.hash = 'skills';
+            break;
+          case 'status':
+            output += `<p>All systems operational. <span class="status-indicator"></span> ONLINE</p>`;
+            break;
+          default:
+            output += `<p class="text-red-500">command not found: ${command}</p>`;
+        }
+        commandOutput.innerHTML = output;
+      }
+
+      // Contact Form
+      const contactForm = document.getElementById('contact-form');
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(contactForm);
+        fetch(contactForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(res => {
+          if (res.ok) {
+            showToast('SUCCESS: Message transmitted.');
+            contactForm.reset();
+          } else {
+            showToast('ERROR: Transmission failed.');
+          }
+        }).catch(() => showToast('ERROR: Connection failed.'));
+      });
+
+      // Toast Notification
+      function showToast(message) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.style.opacity = 1;
+        setTimeout(() => { toast.style.opacity = 0; }, 3000);
+      }
+
     </script>
   </body>
 </html>
