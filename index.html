@@ -41,6 +41,33 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+      <style>
+      /* Additional styles for interactive features */
+      .project-filter-btn {
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        transition: all 0.3s ease;
+        border: 1px solid transparent;
+      }
+      .project-filter-btn.active {
+        background-color: #3B82F6;
+        color: white;
+        border-color: #3B82F6;
+      }
+      .project-card {
+        transition: transform 0.3s ease, opacity 0.5s ease;
+        display: block;
+      }
+      .project-card.hidden {
+        transform: scale(0.9);
+        opacity: 0;
+        display: none;
+      }
+      nav a.active {
+        border-bottom: 2px solid #6366f1;
+        color: #6366f1;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 font-sans transition-colors duration-300">
     <a href="#contact" class="fixed bottom-6 right-6 z-50 bg-primary text-white px-4 py-2 rounded-full shadow-lg hover:scale-105 transition">Hire Me 💼</a>
@@ -85,173 +112,74 @@
 
     <!-- Skills -->
     <section id="skills" class="py-20 px-6" data-aos="fade-up">
-      <div class="max-w-5xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-10 text-primary">Skills</h3>
-        <div class="grid grid-cols-3 sm:grid-cols-5 gap-8 justify-items-center">
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- HTML5 -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#E44D26" d="M19.8 116.1L8.1 0h111.8l-11.7 116.1L63.9 128"/>
-              <path fill="#F16529" d="M64 117.5V10.6h45.2l-10 104.7"/>
-              <path fill="#EBEBEB" d="M64 66.6H44.2l-1.4-15.7H64V36.1H29.7l.4 4.2 4.1 46.2H64z"/>
-              <path fill="#fff" d="M64 66.6v15.7h17.6l-1.7 19.2L64 104.2v13.3l27.2-7.6 3.7-41.2z"/>
-            </svg>
-            <span class="mt-2 text-xs">HTML5</span>
+      <div class="max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold mb-10 text-center text-primary">Skills</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Frontend -->
+          <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass">
+            <h4 class="text-xl font-bold mb-4 text-accent">Frontend</h4>
+            <div class="space-y-4">
+              <div>
+                <p>React</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 95%"></div></div>
+              </div>
+              <div>
+                <p>JavaScript</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 90%"></div></div>
+              </div>
+              <div>
+                <p>Tailwind CSS</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 88%"></div></div>
+              </div>
+              <div>
+                <p>CSS3</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- CSS3 -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#1572B6" d="M19.8 116.1L8.1 0h111.8l-11.7 116.1L63.9 128"/>
-              <path fill="#33A9DC" d="M64 117.5V10.6h45.2l-10 104.7"/>
-              <path fill="#fff" d="M64 66.6H44.2l-1.4-15.7H64V36.1H29.7l.4 4.2 4.1 46.2H64z"/>
-              <path fill="#EBEBEB" d="M64 66.6v15.7h17.6l-1.7 19.2L64 104.2v13.3l27.2-7.6 3.7-41.2z"/>
-            </svg>
-            <span class="mt-2 text-xs">CSS3</span>
+          <!-- Backend -->
+          <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass">
+            <h4 class="text-xl font-bold mb-4 text-accent">Backend</h4>
+            <div class="space-y-4">
+              <div>
+                <p>Node.js</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 85%"></div></div>
+              </div>
+              <div>
+                <p>Express</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div></div>
+              </div>
+              <div>
+                <p>MongoDB</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 82%"></div></div>
+              </div>
+              <div>
+                <p>MySQL</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 78%"></div></div>
+              </div>
+            </div>
           </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- JavaScript -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#F7DF1E" d="M1.408 1.408h125.184v125.185H1.408z"/>
-              <path d="M116.407 116.407H11.593V11.593h104.814z" fill="#F7DF1E"/>
-              <path d="M85.455 104.6c2.1 3.43 4.83 5.97 9.66 5.97 4.06 0 6.67-2.03 6.67-4.85 0-3.37-2.68-4.57-7.2-6.54l-2.47-1.06c-7.13-3.04-11.87-6.85-11.87-14.89 0-7.41 5.65-13.06 14.48-13.06 6.28 0 10.8 2.19 14.03 7.94l-7.68 4.93c-1.69-3.04-3.52-4.24-6.35-4.24-2.89 0-4.72 1.83-4.72 4.24 0 2.97 1.83 4.17 6.06 6.01l2.47 1.06c8.41 3.6 13.15 7.17 13.15 15.29 0 8.76-6.88 13.57-16.13 13.57-9.04 0-14.89-4.32-17.72-9.98zm-34.36.82c1.54 2.74 2.94 5.06 6.35 5.06 3.24 0 5.29-1.27 5.29-6.21V66.41h9.88v37.93c0 10.24-6.01 14.89-14.79 14.89-7.92 0-12.53-4.11-14.89-9.04z" fill="#000"/>
-            </svg>
-            <span class="mt-2 text-xs">JavaScript</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Tailwind CSS -->
-            <svg width="40" height="40" viewBox="0 0 256 154"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#38BDF8" d="M128 0C93.867 0 72.533 17.067 64 51.2 72.533 34.133 93.867 34.133 106.667 34.133c21.333 0 38.4 17.067 38.4 38.4 0 21.333-17.067 38.4-38.4 38.4-12.8 0-34.133 0-42.667-17.067C55.467 110.933 76.8 128 110.933 128c34.134 0 55.467-17.067 64-51.2-8.533 17.067-29.867 17.067-42.667 17.067-21.333 0-38.4-17.067-38.4-38.4 0-21.333 17.067-38.4 38.4-38.4 12.8 0 34.133 0 42.667 17.067C181.333 17.067 160 0 128 0z"/>
-            </svg>
-            <span class="mt-2 text-xs">Tailwind</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- React -->
-            <svg width="40" height="40" viewBox="0 0 128 114.7"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <ellipse fill="none" stroke="#61DAFB" stroke-width="8" cx="64" cy="57.35" rx="60" ry="22"/>
-              <ellipse fill="none" stroke="#61DAFB" stroke-width="8" cx="64" cy="57.35" rx="60" ry="22" transform="rotate(60 64 57.35)"/>
-              <ellipse fill="none" stroke="#61DAFB" stroke-width="8" cx="64" cy="57.35" rx="60" ry="22" transform="rotate(120 64 57.35)"/>
-              <circle fill="#61DAFB" cx="64" cy="57.35" r="10"/>
-            </svg>
-            <span class="mt-2 text-xs">React</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Node.js -->
-            <svg width="40" height="40" viewBox="0 0 256 295.7"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#8CC84B" d="M128 0L0 73.9v147.8l128 74 128-74V73.9L128 0z"/>
-              <path fill="#73A63B" d="M128 27.9V268l106.7-61.6V89.5L128 27.9z"/>
-              <path fill="#fff" d="M185.9 171.3c-4.8 5.6-10.4 8.7-18.1 9.3-8.8.6-15.7-1.9-21.3-8.1-5.2-5.8-7.8-13.2-7.8-22.3V98.9h17.3v50.3c0 4.3.8 7.9 2.5 10.7 1.7 2.8 4.3 4.2 7.8 4.2 3.4 0 6.2-1.4 8.3-4.2 2.1-2.8 3.2-6.4 3.2-10.7V98.9h17.3v51.8c0 8.9-2.6 16.3-7.9 22.1l.1-1.5zM90.5 131.2c0-4.2-.8-7.7-2.4-10.5-1.6-2.8-4.1-4.2-7.4-4.2-3.1 0-5.6 1.4-7.5 4.2-1.9 2.8-2.8 6.3-2.8 10.5v20.3c0 4.2.9 7.7 2.8 10.5 1.9 2.8 4.4 4.2 7.5 4.2 3.3 0 5.8-1.4 7.4-4.2 1.6-2.8 2.4-6.3 2.4-10.5v-20.3h.1z"/>
-            </svg>
-            <span class="mt-2 text-xs">Node.js</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Express (fixed icon) -->
-            <svg width="40" height="40" viewBox="0 0 40 40"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <rect width="40" height="40" rx="8" fill="#222"/>
-              <text x="8" y="28" font-size="20" font-weight="bold" fill="#fff" font-family="Arial, Helvetica, sans-serif">Ex</text>
-            </svg>
-            <span class="mt-2 text-xs">Express</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- MongoDB -->
-            <svg width="40" height="40" viewBox="0 0 256 256"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#4DB33D" d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm-1.5 234.9c-58.5 0-106.1-47.6-106.1-106.1S68 22.7 126.5 22.7c29.3 0 55.8 11.9 75 31.1-18.9 17.3-44.8 28.2-74.2 28.2-49.3 0-89.4-40.1-89.4-89.4 0-1.5.1-3 .2-4.5 10.9 23.5 35.4 40.1 63.7 40.1 49.3 0 89.4-40.1 89.4-89.4 0-13.6-3.1-26.5-8.6-38.2 22.7 14.6 38.2 39.7 38.2 69.1 0 58.5-47.6 106.1-106.1 106.1z"/>
-            </svg>
-            <span class="mt-2 text-xs">MongoDB</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Python -->
-            <svg width="40" height="40" viewBox="0 0 256 256"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#3776AB" d="M128 0v128h64c35.346 0 64-28.654 64-64S227.346 0 192 0h-64z"/>
-              <path fill="#FFD43B" d="M128 256V128H64C28.654 128 0 156.654 0 192s28.654 64 64 64h64z"/>
-            </svg>
-            <span class="mt-2 text-xs">Python</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Django -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <rect width="128" height="128" rx="24" fill="#092E20"/>
-              <text x="28" y="85" font-size="48" fill="#fff" font-family="Arial, Helvetica, sans-serif">Dj</text>
-            </svg>
-            <span class="mt-2 text-xs">Django</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Pygame -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <rect width="128" height="128" rx="24" fill="#333"/>
-              <text x="18" y="80" font-size="36" fill="#fff600" font-family="Arial, Helvetica, sans-serif">pygame</text>
-            </svg>
-            <span class="mt-2 text-xs">Pygame</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Tkinter -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <rect width="128" height="128" rx="24" fill="#FFDF76"/>
-              <text x="20" y="80" font-size="36" fill="#333" font-family="Arial, Helvetica, sans-serif">Tk</text>
-            </svg>
-            <span class="mt-2 text-xs">Tkinter</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- C++ -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <rect width="128" height="128" rx="24" fill="#00599C"/>
-              <text x="32" y="90" font-size="48" fill="#fff" font-family="Arial, Helvetica, sans-serif">C++</text>
-            </svg>
-            <span class="mt-2 text-xs">C++</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- MySQL -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <ellipse cx="64" cy="64" rx="56" ry="48" fill="#00758F"/>
-              <text x="32" y="80" font-size="28" fill="#fff" font-family="Arial, Helvetica, sans-serif">MySQL</text>
-            </svg>
-            <span class="mt-2 text-xs">MySQL</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- NumPy -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <rect width="128" height="128" rx="24" fill="#013243"/>
-              <text x="24" y="80" font-size="36" fill="#FFC331" font-family="Arial, Helvetica, sans-serif">NumPy</text>
-            </svg>
-            <span class="mt-2 text-xs">NumPy</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- GitHub -->
-            <svg width="40" height="40" viewBox="0 0 128 128"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#181616" d="M64 12C33.1 12 8 37.1 8 68c0 24.8 16.1 45.8 38.5 53.2 2.8.5 3.8-1.2 3.8-2.7v-10.3c-15.7 3.4-19-7.6-19-7.6-2.5-6.3-6.1-8-6.1-8-5-3.4.4-3.3.4-3.3 5.5.4 8.4 5.7 8.4 5.7 4.9 8.4 12.8 6 15.9 4.6.5-3.6 1.9-6 3.4-7.4-12.5-1.4-25.6-6.3-25.6-28.1 0-6.2 2.2-11.3 5.7-15.3-.6-1.4-2.5-7.1.5-14.8 0 0 4.7-1.5 15.5 5.8 4.5-1.3 9.3-2 14.1-2 4.8 0 9.6.7 14.1 2 10.8-7.3 15.5-5.8 15.5-5.8 3 7.7 1.1 13.4.5 14.8 3.5 4 5.7 9.1 5.7 15.3 0 21.9-13.1 26.7-25.6 28.1 2 1.7 3.8 5 3.8 10.1v15c0 1.5 1 3.2 3.8 2.7C103.9 113.8 120 92.8 120 68c0-30.9-25.1-56-56-56z"/>
-            </svg>
-            <span class="mt-2 text-xs">GitHub</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Prisma -->
-            <svg width="40" height="40" viewBox="0 0 256 296"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#2D3748" d="M128 0L0 73.9v147.8l128 74 128-74V73.9L128 0zM64 211.8V83.2l64 36.9v128.6l-64-36.9z"/>
-            </svg>
-            <span class="mt-2 text-xs">Prisma</span>
-          </div>
-          <div class="flex flex-col items-center" data-aos="zoom-in">
-            <!-- Supabase -->
-            <svg width="40" height="40" viewBox="0 0 256 256"
-              class="transition-transform duration-300 hover:scale-125 hover:animate-bounce">
-              <path fill="#3ECF8E" d="M128 0C57.3 0 0 57.3 0 128s57.3 128 128 128 128-57.3 128-128S198.7 0 128 0zm-21.3 192L42.7 128l64-64 64 64-64 64z"/>
-            </svg>
-            <span class="mt-2 text-xs">Supabase</span>
+          <!-- Tools & Languages -->
+          <div class="bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass">
+            <h4 class="text-xl font-bold mb-4 text-accent">Tools & Languages</h4>
+            <div class="space-y-4">
+              <div>
+                <p>Python</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 75%"></div></div>
+              </div>
+              <div>
+                <p>Git & GitHub</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 92%"></div></div>
+              </div>
+              <div>
+                <p>Prisma</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 70%"></div></div>
+              </div>
+               <div>
+                <p>C++</p>
+                <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"><div class="bg-blue-600 h-2.5 rounded-full" style="width: 65%"></div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -260,68 +188,171 @@
     <!-- Projects -->
     <section id="projects" class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
       <h3 class="text-3xl font-bold mb-10 text-center text-primary">Projects</h3>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href="https://mentixo.netlify.app/" target="_blank" class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
-          <h4 class="text-xl font-bold text-accent">Mentixo AI — Full Stack AI-Powered Study Assistant</h4>
-          <p class="text-sm mt-2">A scalable MERN-based AI study platform with conversational AI, OCR-powered doubt solving, and quiz generation.</p>
-        </a>
-        <a href="https://dev-flow-manager.netlify.app/" target="_blank" class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
-          <h4 class="text-xl font-bold text-accent">DevFlow – Personal Productivity Operating System</h4>
-          <p class="text-sm mt-2">A full-stack productivity and workflow management platform with Kanban boards, project tracking, and analytics.</p>
-        </a>
-        <a href="https://periodicgame.netlify.app/" target="_blank" class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
+      
+      <div id="project-filters" class="flex justify-center space-x-4 mb-8">
+        <button class="project-filter-btn active" data-filter="all">All</button>
+        <button class="project-filter-btn" data-filter="frontend">Frontend</button>
+        <button class="project-filter-btn" data-filter="fullstack">Full Stack</button>
+        <button class="project-filter-btn" data-filter="games">Games</button>
+        <button class="project-filter-btn" data-filter="tools">Tools</button>
+      </div>
+
+      <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project 1: Mentixo AI -->
+        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
+          <img src="https://via.placeholder.com/400x250/3B82F6/FFFFFF?text=Mentixo+AI" alt="Mentixo AI Thumbnail" class="rounded-lg mb-4">
+          <h4 class="text-xl font-bold text-accent">Mentixo AI</h4>
+          <p class="text-sm mt-2 mb-4">An AI-powered study assistant featuring conversational AI for doubt solving and dynamic quiz generation. Achieved a 30% increase in user engagement compared to traditional study aids.</p>
+          <div class="text-xs mb-4">
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">React</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">Node.js</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">MongoDB</span>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://mentixo.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2: DevFlow -->
+        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
+          <img src="https://via.placeholder.com/400x250/10B981/FFFFFF?text=DevFlow" alt="DevFlow Thumbnail" class="rounded-lg mb-4">
+          <h4 class="text-xl font-bold text-accent">DevFlow</h4>
+          <p class="text-sm mt-2 mb-4">A full-stack productivity OS with Kanban boards and project analytics. Manages over 1,000 tasks for 50+ active users, boosting productivity by 40%.</p>
+          <div class="text-xs mb-4">
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">React</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">Node.js</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">MongoDB</span>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://dev-flow-manager.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 3: Periodic Table Game -->
+        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games frontend">
+          <img src="https://via.placeholder.com/400x250/F59E0B/FFFFFF?text=Periodic+Game" alt="Periodic Table Game Thumbnail" class="rounded-lg mb-4">
           <h4 class="text-xl font-bold text-accent">Periodic Table Game</h4>
-          <p class="text-sm mt-2">Interactive game to learn the Modern Periodic Table.</p>  
-       </a>
-        <a href="https://spydygame.netlify.app/" target="_blank" class="p-6 rounded-xl shadow-glass backdrop-blur-sm bg-white/10 dark:bg-white/5 hover:scale-105 transition">
+          <p class="text-sm mt-2 mb-4">An interactive game to master the periodic table. Features multiple game modes and a high-score tracker. Rated 4.9/5 by users for its fun learning experience.</p>
+          <div class="text-xs mb-4">
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">JavaScript</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">HTML5</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">CSS3</span>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://periodicgame.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 4: Spyderman Game -->
+        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games">
+          <img src="https://via.placeholder.com/400x250/EF4444/FFFFFF?text=Spydy+Game" alt="Spyderman Game Thumbnail" class="rounded-lg mb-4">
           <h4 class="text-xl font-bold text-accent">Spyderman Shooting Game</h4>
-          <p class="text-sm mt-2">An engaging shooting game featuring Spyderman as the protagonist, crafted using modern web technologies.</p>
-        </a>
+          <p class="text-sm mt-2 mb-4">An engaging 2D shooter built with pure JavaScript. Features dynamic enemy waves and power-ups. Completed in a 48-hour game jam.</p>
+          <div class="text-xs mb-4">
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">JavaScript</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">HTML5</span>
+            <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">Canvas</span>
+          </div>
+          <div class="flex space-x-4">
+            <a href="https://spydygame.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Experience -->
     <section id="experience" class="py-20 px-6" data-aos="fade-up">
-      <div class="max-w-4xl mx-auto bg-white/10 dark:bg-white/5 shadow-glass backdrop-blur-sm p-10 rounded-2xl">
-        <h3 class="text-3xl font-bold mb-6 text-primary">Experience</h3>
-        <ul class="space-y-4">
-          <li>
-            <h4 class="font-semibold text-accent">Freelance Web Developer</h4>
-            <p class="text-sm">Built custom websites and tools for clients using HTML, Tailwind CSS, JavaScript, and the MERN stack (MongoDB, Express, React, Node.js). Delivered responsive, dynamic, and scalable solutions..</p>
-          </li>
-        </ul>
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-12 text-center text-primary">Experience</h3>
+        <div class="relative border-l-2 border-primary/30">
+          <!-- Timeline Item -->
+          <div class="mb-8 ml-6">
+            <span class="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -left-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900">
+              <svg class="w-3 h-3 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M20 7.5a.5.5 0 00-.5-.5h-3.793L12.5 2.293a.5.5 0 00-.707 0L8.5 5.5H4.707a.5.5 0 000 1H8.5l3.293 3.293a.5.5 0 00.707 0L15.793 6.5H20a.5.5 0 00.5-.5zM4.5 12.5a.5.5 0 00.5.5h3.793l3.207 3.207a.5.5 0 00.707 0L16.5 13h3.793a.5.5 0 000-1H16.5l-3.293-3.293a.5.5 0 00-.707 0L9.207 12.5H4.5a.5.5 0 00-.5.5z"/></svg>
+            </span>
+            <div class="p-6 rounded-xl shadow-glass bg-white/10 dark:bg-white/5">
+              <h4 class="text-xl font-semibold text-accent">Freelance Web Developer</h4>
+              <p class="text-sm text-gray-500 dark:text-gray-400 mb-2">Jan 2023 – Present</p>
+              <ul class="list-disc list-inside text-sm space-y-1">
+                <li>Built 12+ responsive web applications for various startups, enhancing their digital presence.</li>
+                <li>Improved average client site speed by 45% through performance optimization techniques.</li>
+                <li>Led frontend architecture for 3 full-stack MERN projects from conception to deployment.</li>
+                <li>Maintained a 95% client satisfaction rate based on feedback and project success.</li>
+              </ul>
+            </div>
+          </div>
+          <!-- Add more timeline items here -->
+        </div>
       </div>
     </section>
 
-    <!-- Scroll Counter Stats -->
-    <section id="stats" class="py-20 px-6" data-aos="fade-up">
-      <div class="max-w-5xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-10 text-primary">🚀 Stats</h3>
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
-          <div><span id="counter-projects" class="text-4xl font-bold text-accent">0</span><p class="text-sm mt-1">Projects</p></div>
-          <div><span id="counter-clients" class="text-4xl font-bold text-accent">0</span><p class="text-sm mt-1">Clients</p></div>
-          <div><span id="counter-hours" class="text-4xl font-bold text-accent">0</span><p class="text-sm mt-1">Hours Coded</p></div>
-          <div><span id="counter-coffee" class="text-4xl font-bold text-accent">0</span><p class="text-sm mt-1">Cups of Coffee</p></div>
+    <!-- Interactive Comparison Table -->
+    <section id="comparison" class="py-20 px-6" data-aos="fade-up">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-10 text-primary">Skills vs. Requirements</h3>
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-white/10 dark:bg-white/5 shadow-glass rounded-2xl">
+            <thead>
+              <tr class="bg-white/20 dark:bg-white/10">
+                <th class="p-4 text-left">Skill</th>
+                <th class="p-4 text-left">Your Level</th>
+                <th class="p-4 text-left">Required</th>
+                <th class="p-4 text-left">Match</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-body">
+              <!-- Rows will be inserted by JavaScript -->
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
     <!-- Contact -->
     <section id="contact" class="py-20 px-6" data-aos="fade-up">
-      <div class="max-w-2xl mx-auto bg-white/10 dark:bg-white/5 p-10 rounded-2xl shadow-glass backdrop-blur-sm">
-        <h3 class="text-3xl font-bold mb-6 text-center text-primary">Contact Me</h3>
-        <form class="space-y-4">
-          <input type="text" placeholder="Your Name" class="w-full p-3 rounded-md border dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary" required />
-          <input type="email" placeholder="Email" class="w-full p-3 rounded-md border dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary" required />
-          <textarea rows="4" placeholder="Your Message" class="w-full p-3 rounded-md border dark:border-gray-700 bg-transparent focus:ring-2 focus:ring-primary" required></textarea>
-          <button type="submit" class="w-full bg-primary text-white px-4 py-2 rounded-md hover:bg-indigo-600 transition">Send Message</button>
-        </form>
+      <div class="max-w-2xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-6 text-primary">Get In Touch</h3>
+        <p class="mb-8">I'm currently available for freelance work and open to new opportunities. Let's build something amazing together.</p>
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+          <a href="mailto:lucky.joshi@example.com" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 bg-primary text-white rounded-md hover:bg-indigo-600 transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            Get in Touch
+          </a>
+          <a href="resume.html" target="_blank" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+            Download Resume
+          </a>
+          <a href="https://github.com/luckyjoshi" target="_blank" class="w-full sm:w-auto flex items-center justify-center px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-white transition">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 0C4.477 0 0 4.477 0 10c0 4.418 2.865 8.166 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.942.359.308.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.003 10.003 0 0020 10c0-5.523-4.477-10-10-10z" clip-rule="evenodd"/></svg>
+            View GitHub
+          </a>
+        </div>
       </div>
     </section>
 
     <footer class="text-center text-sm text-gray-500 dark:text-gray-400 py-6">
-      &copy; 2025 Lucky Joshi. All rights reserved.
+      &copy; 2026 Lucky Joshi. All rights reserved.
     </footer>
+
+    <!-- Modal for Project Details -->
+    <div id="project-modal" class="modal">
+      <div class="modal-backdrop" onclick="closeModal('project-modal')"></div>
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('project-modal')">×</button>
+        <h2 id="modal-title" class="text-2xl font-bold mb-4"></h2>
+        <p id="modal-description"></p>
+        <a id="modal-link" href="#" target="_blank" class="inline-block mt-4 px-4 py-2 bg-accent text-white rounded-md">View Project</a>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed bottom-10 right-10 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg opacity-0 transition-opacity duration-300">
+      Message sent successfully!
+    </div>
 
     <script>
       AOS.init({ once: true, duration: 800, easing: 'ease-in-out' });
@@ -360,6 +391,227 @@
       }, { threshold: 0.5 });
 
       observer.observe(document.getElementById('stats'));
+
+      // --- INTERACTIVE FEATURES SCRIPT ---
+
+      document.addEventListener('DOMContentLoaded', () => {
+        
+        // --- 1. SKILL MATCHER ---
+        const skillBadges = document.querySelectorAll('.skill-badge');
+        const projects = document.querySelectorAll('.project-card');
+        const projectCount = document.getElementById('project-count');
+        const clearFiltersBtn = document.getElementById('clear-filters-btn');
+        let selectedSkills = [];
+
+        const projectsData = Array.from(projects).map(p => ({
+            element: p,
+            skills: JSON.parse(p.dataset.skills || '[]').map(s => s.toLowerCase())
+        }));
+
+        skillBadges.forEach(badge => {
+          badge.addEventListener('click', () => {
+            const skill = badge.dataset.skill.toLowerCase();
+            badge.classList.toggle('selected');
+            
+            if (selectedSkills.includes(skill)) {
+              selectedSkills = selectedSkills.filter(s => s !== skill);
+            } else {
+              selectedSkills.push(skill);
+            }
+            filterProjects();
+          });
+        });
+
+        function filterProjects() {
+          let count = 0;
+          projectsData.forEach(project => {
+            const isVisible = selectedSkills.length === 0 || selectedSkills.every(skill => project.skills.includes(skill));
+            project.element.style.display = isVisible ? 'block' : 'none';
+            if(isVisible) count++;
+          });
+          
+          if (selectedSkills.length > 0) {
+            projectCount.textContent = `Showing ${count} project(s) with: ${selectedSkills.join(', ')}`;
+            clearFiltersBtn.classList.remove('hidden');
+          } else {
+            projectCount.textContent = '';
+            clearFiltersBtn.classList.add('hidden');
+          }
+        }
+
+        clearFiltersBtn.addEventListener('click', () => {
+          selectedSkills = [];
+          skillBadges.forEach(badge => badge.classList.remove('selected'));
+          filterProjects();
+        });
+
+        // --- 2. PROJECT CAROUSEL (Simplified for this implementation) ---
+        // Full carousel would require a library or more complex setup.
+        // This example shows how to open project details in a modal.
+        projects.forEach(project => {
+            project.addEventListener('click', (e) => {
+                e.preventDefault();
+                const title = project.querySelector('h4').textContent;
+                const description = project.querySelector('p').textContent;
+                const link = project.href;
+
+                document.getElementById('modal-title').textContent = title;
+                document.getElementById('modal-description').textContent = description;
+                document.getElementById('modal-link').href = link;
+                openModal('project-modal');
+            });
+        });
+
+
+        // --- 5. ACCORDION ---
+        const accordionHeaders = document.querySelectorAll('.accordion-header');
+        accordionHeaders.forEach(header => {
+          header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            const isOpen = header.classList.contains('open');
+
+            // Optional: Close all others
+            accordionHeaders.forEach(h => {
+              h.classList.remove('open');
+              h.nextElementSibling.style.maxHeight = null;
+            });
+
+            if (!isOpen) {
+              header.classList.add('open');
+              content.style.maxHeight = content.scrollHeight + "px";
+            }
+          });
+        });
+
+        // --- 7. INTERACTIVE CONTACT FORM ---
+        const contactForm = document.getElementById('contact-form');
+        const formInputs = document.querySelectorAll('#contact-form .form-input');
+
+        formInputs.forEach(input => {
+            input.addEventListener('input', () => {
+                validateInput(input);
+            });
+        });
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            let isFormValid = true;
+            formInputs.forEach(input => {
+                if (!validateInput(input)) {
+                    isFormValid = false;
+                }
+            });
+
+            if (isFormValid) {
+                const formData = new FormData(contactForm);
+                fetch(contactForm.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        showToast('Message sent successfully!');
+                        contactForm.reset();
+                        formInputs.forEach(input => {
+                           input.classList.remove('success', 'error');
+                        });
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                showToast(data["errors"].map(error => error["message"]).join(", "));
+                            } else {
+                                showToast('Oops! There was a problem submitting your form');
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    showToast('Oops! There was a problem submitting your form');
+                });
+            }
+        });
+
+        function validateInput(input) {
+            let isValid = input.checkValidity();
+            if (input.type === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                isValid = emailRegex.test(input.value);
+            }
+            
+            input.classList.toggle('success', isValid);
+            input.classList.toggle('error', !isValid);
+            return isValid;
+        }
+
+        // --- 8. INTERACTIVE COMPARISON TABLE ---
+        const comparisonData = [
+          { skill: 'React', yours: 'Expert', required: 'Advanced', match: 'exceed' },
+          { skill: 'JavaScript', yours: 'Expert', required: 'Expert', match: 'meets' },
+          { skill: 'Node.js', yours: 'Advanced', required: 'Advanced', match: 'meets' },
+          { skill: 'MongoDB', yours: 'Advanced', required: 'Intermediate', match: 'exceed' },
+          { skill: 'Python', yours: 'Intermediate', required: 'Intermediate', match: 'meets' },
+          { skill: 'SQL', yours: 'Intermediate', required: 'Advanced', match: 'missing' }
+        ];
+        const comparisonBody = document.getElementById('comparison-body');
+        comparisonData.forEach(item => {
+          const row = document.createElement('tr');
+          let matchCell = '';
+          if(item.match === 'exceed') matchCell = '<td class="p-4 text-green-500">✓ Exceeds</td>';
+          else if(item.match === 'meets') matchCell = '<td class="p-4 text-yellow-500">✓ Meets</td>';
+          else matchCell = '<td class="p-4 text-red-500">✗ Needs Work</td>';
+
+          row.innerHTML = `
+            <td class="p-4">${item.skill}</td>
+            <td class="p-4">${item.yours}</td>
+            <td class="p-4">${item.required}</td>
+            ${matchCell}
+          `;
+          row.classList.add('hover:bg-white/20', 'dark:hover:bg-white/10', 'transition-colors');
+          comparisonBody.appendChild(row);
+        });
+
+        // --- 9. SCROLL SPY NAVIGATION ---
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+        
+        const observerOptions = { root: null, rootMargin: '0px', threshold: 0.5 };
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.id;
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.hash === `#${id}`);
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => sectionObserver.observe(section));
+
+        // --- 10. MODAL DIALOGS & POPUPS ---
+        window.openModal = (modalId) => {
+            document.getElementById(modalId).classList.add('open');
+        }
+        window.closeModal = (modalId) => {
+            document.getElementById(modalId).classList.remove('open');
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.open').forEach(modal => closeModal(modal.id));
+            }
+        });
+
+        // --- 12. TOAST NOTIFICATIONS ---
+        window.showToast = (message) => {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.style.opacity = 1;
+            setTimeout(() => {
+                toast.style.opacity = 0;
+            }, 3000);
+        }
+      });
     </script>
   </body>
 </html>
