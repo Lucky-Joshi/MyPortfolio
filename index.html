@@ -450,10 +450,10 @@
       <div class="max-w-2xl mx-auto text-center">
         <h3 class="text-3xl font-bold mb-6 glitch-text" data-text="[ Get In Touch ]">[ Get In Touch ]</h3>
         <p class="mb-8">I'm currently available for freelance work and open to new opportunities. Let's build something amazing together.</p>
-        <div class="flex flex-col sm:flex-row justify-center items-center gap-4 font-mono">
-          <a href="mailto:lucky.joshi@example.com" class="w-full sm:w-auto px-6 py-3 bg-primary text-darkbg rounded-md border border-primary shadow-glow-md hover:shadow-glow-lg transition-all duration-300">
-            Get in Touch
-          </a>
+        <div class="font-mono text-lg text-primary">
+          luckyjoshi524@gmail.com
+        </div>
+        <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 font-mono">
           <a href="resume.html" target="_blank" class="w-full sm:w-auto px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-darkbg transition-all duration-300">
             Download Resume
           </a>
@@ -620,25 +620,6 @@
         }
         commandOutput.innerHTML = output;
       }
-
-      // Contact Form
-      const contactForm = document.getElementById('contact-form');
-      contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const formData = new FormData(contactForm);
-        fetch(contactForm.action, {
-          method: 'POST',
-          body: formData,
-          headers: { 'Accept': 'application/json' }
-        }).then(res => {
-          if (res.ok) {
-            showToast('SUCCESS: Message transmitted.');
-            contactForm.reset();
-          } else {
-            showToast('ERROR: Transmission failed.');
-          }
-        }).catch(() => showToast('ERROR: Connection failed.'));
-      });
 
       // Toast Notification
       function showToast(message) {
