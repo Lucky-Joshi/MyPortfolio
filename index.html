@@ -4,39 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lucky Joshi | MERN Stack Developer Portfolio | React Node.js MongoDB</title>
-    
+
     <meta name="description" content="Lucky Joshi — MERN stack developer crafting pixel-perfect UIs with React, Node.js, MongoDB, and Python. Explore projects, skills, and experience." />
     <meta name="keywords" content="Lucky Joshi, MERN developer, React developer, Node.js, portfolio, web developer, full stack, JavaScript, Python, MongoDB" />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Lucky Joshi" />
+    <meta name="theme-color" content="#0a0e27" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Lucky Joshi" />
     <link rel="canonical" href="https://luckyjoshiportfoliopage.netlify.app" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <link rel="icon" type="image/png" href="/preview.png" />
+    <link rel="apple-touch-icon" href="/preview.png" />
 
     <meta property="og:title" content="Lucky Joshi | MERN Stack Developer Portfolio" />
     <meta property="og:description" content="Lucky Joshi — MERN stack developer crafting pixel-perfect UIs with React, Node.js, MongoDB, and Python." />
     <meta property="og:image" content="https://luckyjoshiportfoliopage.netlify.app/preview.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:url" content="https://luckyjoshiportfoliopage.netlify.app" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="en_US" />
+    <meta property="og:site_name" content="Lucky Joshi Portfolio" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Lucky Joshi | MERN Stack Developer Portfolio" />
     <meta name="twitter:description" content="Lucky Joshi — MERN stack developer. Check out my projects, skills, and experience." />
     <meta name="twitter:image" content="https://luckyjoshiportfoliopage.netlify.app/preview.png" />
+    <meta name="twitter:creator" content="@LuckyJoshi" />
 
     <script type="application/ld+json">
-    {
+    [{
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Lucky Joshi",
       "jobTitle": "MERN Stack Developer",
       "url": "https://luckyjoshiportfoliopage.netlify.app",
-      "sameAs": [
-        "https://github.com/Lucky-Joshi"
-      ],
+      "sameAs": ["https://github.com/Lucky-Joshi"],
       "description": "MERN stack developer crafting pixel-perfect UIs with React, Node.js, MongoDB, and Python."
-    }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Lucky Joshi Portfolio",
+      "url": "https://luckyjoshiportfoliopage.netlify.app",
+      "description": "Portfolio of MERN stack developer Lucky Joshi featuring projects, skills, and experience.",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://luckyjoshiportfoliopage.netlify.app/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }]
     </script>
+
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://cdn.tailwindcss.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -319,7 +347,7 @@
       <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project 1: Mentixo AI -->
         <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
-          <img src="mentixo.png" alt="Mentixo AI Thumbnail" class="rounded-lg mb-4">
+          <img src="mentixo.png" alt="Mentixo AI — AI-powered study assistant dashboard built with React and Node.js" loading="lazy" class="rounded-lg mb-4">
           <h4 class="text-xl font-bold text-accent">Mentixo AI</h4>
           <p class="text-sm mt-2 mb-4">An AI-powered study assistant featuring conversational AI for doubt solving and dynamic quiz generation. Achieved a 30% increase in user engagement compared to traditional study aids.</p>
           <div class="text-xs mb-4">
@@ -328,14 +356,14 @@
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">MongoDB</span>
           </div>
           <div class="flex space-x-4">
-            <a href="https://mentixo.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
-            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+            <a href="https://mentixo.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
           </div>
         </div>
 
         <!-- Project 2: DevFlow -->
         <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
-          <img src="devflow.png" alt="DevFlow Thumbnail" class="rounded-lg mb-4">
+          <img src="devflow.png" alt="DevFlow — full-stack productivity Kanban board system built with React and Node.js" loading="lazy" class="rounded-lg mb-4">
           <h4 class="text-xl font-bold text-accent">DevFlow</h4>
           <p class="text-sm mt-2 mb-4">A full-stack productivity OS with Kanban boards and project analytics. Manages over 1,000 tasks for 50+ active users, boosting productivity by 40%.</p>
           <div class="text-xs mb-4">
@@ -344,14 +372,14 @@
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">MongoDB</span>
           </div>
           <div class="flex space-x-4">
-            <a href="https://dev-flow-manager.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
-            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+            <a href="https://dev-flow-manager.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
           </div>
         </div>
 
         <!-- Project 3: Periodic Table Game -->
         <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games frontend">
-          <img src="periodic-game.png" alt="Periodic Table Game Thumbnail" class="rounded-lg mb-4">
+          <img src="periodic-game.png" alt="Periodic Table Game — interactive chemistry quiz with multiple game modes" loading="lazy" class="rounded-lg mb-4">
           <h4 class="text-xl font-bold text-accent">Periodic Table Game</h4>
           <p class="text-sm mt-2 mb-4">An interactive game to master the periodic table. Features multiple game modes and a high-score tracker. Rated 4.9/5 by users for its fun learning experience.</p>
           <div class="text-xs mb-4">
@@ -360,14 +388,14 @@
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">CSS3</span>
           </div>
           <div class="flex space-x-4">
-            <a href="https://periodicgame.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
-            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+            <a href="https://periodicgame.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
           </div>
         </div>
 
         <!-- Project 4: Spyderman Game -->
         <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games">
-          <img src="spyderman-game.png" alt="Spyderman Game Thumbnail" class="rounded-lg mb-4">
+          <img src="spyderman-game.png" alt="Spyderman Shooting Game — 2D JavaScript shooter with enemy waves and power-ups" loading="lazy" class="rounded-lg mb-4">
           <h4 class="text-xl font-bold text-accent">Spyderman Shooting Game</h4>
           <p class="text-sm mt-2 mb-4">An engaging 2D shooter built with pure JavaScript. Features dynamic enemy waves and power-ups. Completed in a 48-hour game jam.</p>
           <div class="text-xs mb-4">
@@ -376,8 +404,8 @@
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">Canvas</span>
           </div>
           <div class="flex space-x-4">
-            <a href="https://spydygame.netlify.app/" target="_blank" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
-            <a href="#" target="_blank" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+            <a href="https://spydygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
+            <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
           </div>
         </div>
       </div>
@@ -481,10 +509,10 @@
           luckyjoshi524@gmail.com
         </div>
         <div class="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4 font-mono">
-          <a href="resume.html" target="_blank" class="w-full sm:w-auto px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-darkbg transition-all duration-300">
+          <a href="resume.html" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 border border-primary text-primary rounded-md hover:bg-primary hover:text-darkbg transition-all duration-300">
             Download Resume
           </a>
-          <a href="https://github.com/Lucky-Joshi" target="_blank" class="w-full sm:w-auto px-6 py-3 border border-primary/50 text-primary/80 rounded-md hover:bg-primary hover:text-darkbg hover:border-primary transition-all duration-300">
+          <a href="https://github.com/Lucky-Joshi" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 border border-primary/50 text-primary/80 rounded-md hover:bg-primary hover:text-darkbg hover:border-primary transition-all duration-300">
             View GitHub
           </a>
         </div>
