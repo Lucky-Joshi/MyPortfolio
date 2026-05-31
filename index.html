@@ -38,22 +38,56 @@
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Lucky Joshi",
-      "jobTitle": "MERN Stack Developer",
+      "jobTitle": "MERN Stack Developer | Full Stack Developer",
       "url": "https://luckyjoshiportfoliopage.netlify.app",
-      "sameAs": ["https://github.com/Lucky-Joshi"],
-      "description": "MERN stack developer crafting pixel-perfect UIs with React, Node.js, MongoDB, and Python."
+      "email": "luckyjoshi524@gmail.com",
+      "image": "https://luckyjoshiportfoliopage.netlify.app/preview.png",
+      "location": {
+        "@type": "Place",
+        "name": "India"
+      },
+      "sameAs": [
+        "https://github.com/Lucky-Joshi",
+        "https://www.linkedin.com/in/lucky-joshi"
+      ],
+      "description": "MERN stack developer crafting pixel-perfect UIs with React, Node.js, MongoDB, and Python. Specialized in full-stack web development.",
+      "knowsAbout": ["MERN Stack", "React", "Node.js", "MongoDB", "Python", "JavaScript", "Web Development", "Full Stack Development"]
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
       "name": "Lucky Joshi Portfolio",
       "url": "https://luckyjoshiportfoliopage.netlify.app",
-      "description": "Portfolio of MERN stack developer Lucky Joshi featuring projects, skills, and experience.",
+      "description": "Portfolio of Lucky Joshi — MERN stack developer featuring projects, skills, and experience.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://luckyjoshiportfoliopage.netlify.app/?search={search_term_string}",
         "query-input": "required name=search_term_string"
       }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://luckyjoshiportfoliopage.netlify.app"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://luckyjoshiportfoliopage.netlify.app#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Resume",
+          "item": "https://luckyjoshiportfoliopage.netlify.app/resume.html"
+        }
+      ]
     }]
     </script>
 
@@ -244,6 +278,7 @@
           <span class="flex-grow text-center text-xs text-gray-400">/bin/bash -- lucky.joshi</span>
         </div>
         <div class="p-6 text-left font-mono text-sm sm:text-base">
+          <h1 class="sr-only">Lucky Joshi — MERN Stack Developer Portfolio</h1>
           <div id="terminal-code"></div>
           <div class="mt-4">
             <span class="text-primary">status:</span>
@@ -257,7 +292,7 @@
     <!-- About -->
     <section id="about" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-4xl mx-auto border border-primary/30 p-8 rounded-lg shadow-glow scan-lines">
-        <h3 class="text-3xl font-bold mb-4 glitch-text" data-text="[ About Me ]">[ About Me ]</h3>
+        <h2 class="text-3xl font-bold mb-4 glitch-text" data-text="[ About Me ]">[ About Me ]</h2>
         <p class="leading-relaxed">
           <span class="text-code-keyword">const</span> <span class="text-primary">lucky</span> = { <br>
           &nbsp;&nbsp;<span class="text-code-string">'description'</span>: <span class="text-code-string">'A MERN Developer blending clean code with sleek, hacker-inspired designs.'</span>, <br>
@@ -271,7 +306,7 @@
     <!-- Skills -->
     <section id="skills" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-5xl mx-auto">
-        <h3 class="text-3xl font-bold mb-10 text-center glitch-text" data-text="[ Skill Matrix ]">[ Skill Matrix ]</h3>
+        <h2 class="text-3xl font-bold mb-10 text-center glitch-text" data-text="[ Skill Matrix ]">[ Skill Matrix ]</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           
           <div class="skill-cell text-center border border-primary/50 p-4 rounded-md hover:shadow-glow-md hover:border-primary transition-all duration-300 cursor-pointer" data-skill="React">
@@ -342,13 +377,13 @@
 
     <!-- Projects -->
     <section id="projects" class="py-20 px-6 max-w-6xl mx-auto" data-aos="fade-up">
-      <h3 class="text-3xl font-bold mb-10 text-center text-primary">Projects</h3>
+      <h2 class="text-3xl font-bold mb-10 text-center text-primary">Portfolio Projects</h2>
 
       <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Project 1: Mentixo AI -->
-        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
-          <img src="mentixo.png" alt="Mentixo AI — AI-powered study assistant dashboard built with React and Node.js" loading="lazy" class="rounded-lg mb-4">
-          <h4 class="text-xl font-bold text-accent">Mentixo AI</h4>
+        <article class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
+          <img src="mentixo.png" alt="Mentixo AI — MERN-based AI-powered study assistant platform with conversational AI, OCR-powered doubt solving, quiz generation, and real-time analytics using Gemini API" loading="lazy" class="rounded-lg mb-4" width="400" height="250">
+          <h3 class="text-xl font-bold text-accent">Mentixo AI</h3>
           <p class="text-sm mt-2 mb-4">An AI-powered study assistant featuring conversational AI for doubt solving and dynamic quiz generation. Achieved a 30% increase in user engagement compared to traditional study aids.</p>
           <div class="text-xs mb-4">
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">React</span>
@@ -356,15 +391,15 @@
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">MongoDB</span>
           </div>
           <div class="flex space-x-4">
-            <a href="https://mentixo.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+            <a href="https://mentixo.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition" title="Open Mentixo AI live demo">Live Demo</a>
+            <a href="https://github.com/Lucky-Joshi/mentixo" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition" title="View Mentixo AI source code on GitHub">GitHub</a>
           </div>
-        </div>
+        </article>
 
         <!-- Project 2: DevFlow -->
-        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
-          <img src="devflow.png" alt="DevFlow — full-stack productivity Kanban board system built with React and Node.js" loading="lazy" class="rounded-lg mb-4">
-          <h4 class="text-xl font-bold text-accent">DevFlow</h4>
+        <article class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="fullstack">
+          <img src="devflow.png" alt="DevFlow — full-stack productivity platform featuring Kanban boards, project tracking, task management, and analytics dashboard built with React, Node.js, PostgreSQL, and Tailwind CSS" loading="lazy" class="rounded-lg mb-4" width="400" height="250">
+          <h3 class="text-xl font-bold text-accent">DevFlow</h3>
           <p class="text-sm mt-2 mb-4">A full-stack productivity OS with Kanban boards and project analytics. Manages over 1,000 tasks for 50+ active users, boosting productivity by 40%.</p>
           <div class="text-xs mb-4">
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">React</span>
@@ -375,12 +410,12 @@
             <a href="https://dev-flow-manager.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
             <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
           </div>
-        </div>
+        </article>
 
         <!-- Project 3: Periodic Table Game -->
-        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games frontend">
-          <img src="periodic-game.png" alt="Periodic Table Game — interactive chemistry quiz with multiple game modes" loading="lazy" class="rounded-lg mb-4">
-          <h4 class="text-xl font-bold text-accent">Periodic Table Game</h4>
+        <article class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games frontend">
+          <img src="periodic-game.png" alt="Periodic Table Game — interactive educational game for learning chemistry elements with multiple game modes, leaderboard, and high-score tracking system" loading="lazy" class="rounded-lg mb-4" width="400" height="250">
+          <h3 class="text-xl font-bold text-accent">Periodic Table Game</h3>
           <p class="text-sm mt-2 mb-4">An interactive game to master the periodic table. Features multiple game modes and a high-score tracker. Rated 4.9/5 by users for its fun learning experience.</p>
           <div class="text-xs mb-4">
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">JavaScript</span>
@@ -388,15 +423,15 @@
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">CSS3</span>
           </div>
           <div class="flex space-x-4">
-            <a href="https://periodicgame.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+            <a href="https://periodicgame.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition" title="Open Periodic Table Game">Live Demo</a>
+            <a href="https://github.com/Lucky-Joshi/periodic-game" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition" title="View Periodic Table Game source code">GitHub</a>
           </div>
-        </div>
+        </article>
 
         <!-- Project 4: Spyderman Game -->
-        <div class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games">
-          <img src="spyderman-game.png" alt="Spyderman Shooting Game — 2D JavaScript shooter with enemy waves and power-ups" loading="lazy" class="rounded-lg mb-4">
-          <h4 class="text-xl font-bold text-accent">Spyderman Shooting Game</h4>
+        <article class="project-card bg-white/10 dark:bg-white/5 p-6 rounded-xl shadow-glass hover:scale-102 transition-transform duration-300" data-category="games">
+          <img src="spyderman-game.png" alt="Spyderman Shooting Game — 2D action game featuring dynamic enemy waves, power-ups system, and real-time scoring using HTML5 Canvas and JavaScript" loading="lazy" class="rounded-lg mb-4" width="400" height="250">
+          <h3 class="text-xl font-bold text-accent">Spyderman Shooting Game</h3>
           <p class="text-sm mt-2 mb-4">An engaging 2D shooter built with pure JavaScript. Features dynamic enemy waves and power-ups. Completed in a 48-hour game jam.</p>
           <div class="text-xs mb-4">
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1 mr-2">JavaScript</span>
@@ -404,17 +439,17 @@
             <span class="inline-block bg-gray-700 text-gray-200 rounded-full px-3 py-1">Canvas</span>
           </div>
           <div class="flex space-x-4">
-            <a href="https://spydygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition">Live Demo</a>
-            <a href="#" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition">GitHub</a>
+            <a href="https://spydygame.netlify.app/" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 bg-accent text-white rounded-md hover:bg-teal-600 transition" title="Open Spyderman game">Live Demo</a>
+            <a href="https://github.com/Lucky-Joshi/spyderman-game" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2 border border-accent text-accent rounded-md hover:bg-accent hover:text-white transition" title="View Spyderman game source code">GitHub</a>
           </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <!-- GitHub Activity Stream -->
     <section id="experience" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-4xl mx-auto">
-        <h3 class="text-3xl font-bold mb-12 text-center glitch-text" data-text="[ Git Log ]">[ Git Log ]</h3>
+        <h2 class="text-3xl font-bold mb-12 text-center glitch-text" data-text="[ Git Log ]">[ Git Log ]</h2>
         <div class="p-6 border border-primary/30 rounded-lg shadow-glow scan-lines font-mono text-sm">
           <div id="git-log" class="space-y-2">
             <!-- Commits will be injected by JS -->
@@ -433,7 +468,7 @@
     <!-- Performance Metrics -->
     <section id="performance" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-4xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-10 glitch-text" data-text="[ Live Performance Metrics ]">[ Live Performance Metrics ]</h3>
+        <h2 class="text-3xl font-bold mb-10 glitch-text" data-text="[ Live Performance Metrics ]">[ Live Performance Metrics ]</h2>
         <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-left">
           <div class="metric-card">
             <p>Lighthouse Score</p>
@@ -503,7 +538,7 @@
     <!-- Contact -->
     <section id="contact" class="py-20 px-6" data-aos="fade-up">
       <div class="max-w-2xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-6 glitch-text" data-text="[ Get In Touch ]">[ Get In Touch ]</h3>
+        <h2 class="text-3xl font-bold mb-6 glitch-text" data-text="[ Get In Touch ]">[ Get In Touch ]</h2>
         <p class="mb-8">I'm currently available for freelance work and open to new opportunities. Let's build something amazing together.</p>
         <div class="font-mono text-lg text-primary">
           luckyjoshi524@gmail.com
