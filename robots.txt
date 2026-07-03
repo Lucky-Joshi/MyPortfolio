@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://luckyjoshiportfoliopage.netlify.app/sitemap.xml
+Host: https://luckyjoshiportfoliopage.netlify.app
