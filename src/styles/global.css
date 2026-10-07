@@ -142,6 +142,9 @@ nav a.active {
   color: #00ff88;
   transition: all 0.3s;
 }
+.form-input::placeholder {
+  color: rgba(0, 255, 136, 0.4);
+}
 .form-input:focus {
   outline: none;
   border-color: #00ff88;
