@@ -19,12 +19,22 @@ A modern and responsive portfolio website to showcase my skills, projects, and e
 
 ## 💻 Tech Stack
 
-- HTML5
+- React 19 (JSX components)
+- Vite (dev server & production build)
 - Tailwind CSS
-- JavaScript (Vanilla)
-- Typed.js
-- CountUp.js
 - AOS (Animate on Scroll)
+- JavaScript (ES6+)
+
+## 🛠️ Local Development
+
+```bash
+npm install
+npm run dev      # start dev server
+npm run build    # production build to dist/
+npm run preview  # preview the production build
+```
+
+Static assets (`resume.html`, images, `manifest.json`, `robots.txt`, `sitemap.xml`, `_headers`) are copied to `dist/` unchanged during the build.
 
 ## 🔗 Live Demo
 
