@@ -4,7 +4,7 @@ A modern and responsive portfolio website to showcase my skills, projects, and e
 
 ## 📸 Preview
 
-![Lucky Portfolio Preview](./preview.png)
+![Lucky Portfolio Preview](./public/preview.png)
 
 
 ## 🚀 Features
