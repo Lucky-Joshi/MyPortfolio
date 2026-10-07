@@ -1,0 +1,55 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Install & build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Verify dist output (SEO & static files)
+        run: |
+          for f in \
+            index.html \
+            robots.txt \
+            sitemap.xml \
+            manifest.json \
+            _headers \
+            resume.html \
+            googlefee5e33e88711b62.html \
+            "Lucky Joshi - Resume.pdf" \
+            apple-touch-icon.png \
+            icon-192.png \
+            icon-512.png \
+            preview.png; do
+            if [ ! -f "dist/$f" ]; then
+              echo "::error::Missing dist/$f"
+              exit 1
+            fi
+          done
+          grep -q 'id="root"' dist/index.html || { echo "::error::dist/index.html has no #root mount point"; exit 1; }
+          grep -qE '/assets/index-.*\.js' dist/index.html || { echo "::error::dist/index.html does not reference built JS bundle"; exit 1; }
+          grep -q 'href="/sitemap.xml"' dist/index.html || { echo "::error::sitemap link missing from dist/index.html"; exit 1; }
+          echo "dist output OK"
