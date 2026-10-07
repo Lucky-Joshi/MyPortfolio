@@ -57,12 +57,12 @@ export default function CommandPalette() {
         )
         break
       default:
-        body = <p className="text-red-500">command not found: {command}</p>
+        body = <p className="text-red-400">command not found: {command}</p>
     }
 
     setOutput(
       <>
-        <p className="text-gray-500">&gt; {command}</p>
+        <p className="text-muted/70">&gt; {command}</p>
         {body}
       </>
     )
@@ -79,12 +79,23 @@ export default function CommandPalette() {
   return (
     <div
       id="command-palette"
-      className={`${open ? 'flex' : 'hidden'} fixed inset-0 z-50 items-center justify-center bg-darkbg/80 backdrop-blur-sm`}
+      className={`${open ? 'flex' : 'hidden'} fixed inset-0 z-50 items-center justify-center bg-black/60 p-4 backdrop-blur-sm`}
       role="dialog"
       aria-modal="true"
       aria-labelledby="command-palette-title"
     >
-      <div className="w-full max-w-lg border border-primary/50 rounded-lg shadow-glow-lg bg-darkbg scan-lines">
+      <div className="terminal-window w-full max-w-xl overflow-hidden">
+        <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.03] px-4 py-3">
+          <span className="h-3 w-3 rounded-full bg-red-500" aria-hidden="true" />
+          <span className="h-3 w-3 rounded-full bg-yellow-500" aria-hidden="true" />
+          <span className="h-3 w-3 rounded-full bg-green-500" aria-hidden="true" />
+          <span className="flex-grow text-center font-mono text-xs text-muted">
+            command palette
+          </span>
+          <kbd className="rounded border border-white/10 bg-white/5 px-1.5 py-0.5 font-mono text-[10px] text-muted">
+            esc
+          </kbd>
+        </div>
         <div className="p-4">
           <p id="command-palette-title" className="sr-only">
             Portfolio command palette
@@ -96,12 +107,16 @@ export default function CommandPalette() {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={onKeyDown}
-            className="w-full bg-transparent text-primary focus:outline-none"
+            className="w-full bg-transparent font-mono text-sm text-primary focus:outline-none"
             placeholder="> Enter command (e.g., help)..."
             aria-label="Portfolio command palette input"
           />
         </div>
-        <div id="command-output" className="p-4 border-t border-primary/20 h-48 overflow-y-auto text-sm" aria-live="polite">
+        <div
+          id="command-output"
+          className="h-48 overflow-y-auto border-t border-white/10 p-4 font-mono text-sm leading-relaxed"
+          aria-live="polite"
+        >
           {output}
         </div>
       </div>

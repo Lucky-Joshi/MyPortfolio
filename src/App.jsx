@@ -3,6 +3,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import Header from './components/Header'
 import HomeSection from './components/HomeSection'
+import SkillsMarquee from './components/SkillsMarquee'
 import AboutSection from './components/AboutSection'
 import SkillsSection from './components/SkillsSection'
 import ProjectsSection from './components/ProjectsSection'
@@ -39,7 +40,7 @@ export default function App() {
       <a
         href="#contact"
         aria-label="Contact Lucky Joshi for full stack developer and software engineering intern opportunities"
-        className="fixed bottom-6 right-6 z-50 bg-primary text-darkbg px-4 py-2 rounded-md border border-primary shadow-glow-md hover:scale-105 hover:shadow-glow-lg transition-all duration-300"
+        className="fixed bottom-6 right-6 z-50 rounded-full bg-gradient-primary px-5 py-2.5 font-mono text-sm font-bold text-darkbg shadow-glow-md transition-all duration-300 hover:scale-105 hover:shadow-glow-lg"
       >
         root@lucky:~# hire-me
       </a>
@@ -48,6 +49,7 @@ export default function App() {
 
       <main id="main-content">
         <HomeSection />
+        <SkillsMarquee />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
