@@ -1,4 +1,6 @@
 import { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 import Header from './components/Header'
 import HomeSection from './components/HomeSection'
 import AboutSection from './components/AboutSection'
@@ -20,9 +22,9 @@ export default function App() {
   const { message, visible } = useToast()
 
   useEffect(() => {
-    if (!aosInitialized && window.AOS) {
+    if (!aosInitialized) {
       aosInitialized = true
-      window.AOS.init({ once: true, duration: 800, easing: 'ease-in-out' })
+      AOS.init({ once: true, duration: 800, easing: 'ease-in-out' })
     }
   }, [])
 
