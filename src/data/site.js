@@ -13,7 +13,7 @@ export const SITE = {
   resumePath: '/resume.html',
   resumePdfPath: '/Lucky Joshi - Resume.pdf',
   previewImage: '/preview.png',
-  photo: '/lucky-joshi.jpg',
+  photo: '/lucky-joshi.webp',
   photoAlt: 'Lucky Joshi, full stack developer',
   locale: 'en_US',
   lastUpdated: '2026-10-11'
