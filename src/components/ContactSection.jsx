@@ -55,7 +55,7 @@ export default function ContactSection() {
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row">
             <a
-              href="resume.html"
+              href="/resume.html"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Open Lucky Joshi full stack developer resume"

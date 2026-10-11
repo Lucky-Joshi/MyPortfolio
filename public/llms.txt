@@ -1,0 +1,29 @@
+# Lucky Joshi – Full Stack MERN Developer & AI Intern
+
+> Lucky Joshi is a full stack developer from India who builds MERN and AI-powered web applications. He works with React, Node.js, Express.js, MongoDB, Python and TypeScript, and builds REST APIs, developer tools and machine-learning projects. He is open to software engineering and AI internship opportunities.
+
+## Profile
+
+- Name: Lucky Joshi
+- Role: Full Stack Developer (MERN) and AI Intern
+- Location: India
+- Email: luckyjoshi524@gmail.com
+- GitHub: https://github.com/Lucky-Joshi
+- LinkedIn: https://www.linkedin.com/in/luckyjoshi524
+- Core stack: React, Node.js, Express.js, MongoDB, PostgreSQL, Python, TypeScript, Tailwind CSS, REST APIs, Data Structures and Algorithms, HTML5 Canvas
+
+## Projects
+
+- [Mentixo AI](https://luckyjoshiportfoliopage.netlify.app/projects/mentixo-ai): Full-stack AI study assistant with OCR doubt solving, AI quiz generation and learning analytics. Built with React, Node.js, Express, MongoDB and the Gemini API.
+- [DevFlow](https://luckyjoshiportfoliopage.netlify.app/projects/devflow): Full-stack Kanban project and task manager with project tracking and delivery analytics. Built with React, Node.js, PostgreSQL and Tailwind CSS.
+- [Periodic Table Game](https://luckyjoshiportfoliopage.netlify.app/projects/periodic-table-game): Responsive JavaScript chemistry game with multiple modes and a high-score leaderboard.
+- [Spyderman Shooting Game](https://luckyjoshiportfoliopage.netlify.app/projects/spyderman-shooting-game): HTML5 Canvas browser shooter with enemy waves, collision detection and real-time scoring.
+
+## Pages
+
+- [Home](https://luckyjoshiportfoliopage.netlify.app/): Portfolio overview, skills, projects, experience and contact.
+- [Resume](https://luckyjoshiportfoliopage.netlify.app/resume.html): Full resume for Lucky Joshi.
+
+## Contact
+
+Email luckyjoshi524@gmail.com for internships or freelance web development work.

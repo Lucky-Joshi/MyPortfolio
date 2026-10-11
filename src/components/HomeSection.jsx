@@ -29,9 +29,9 @@ export default function HomeSection() {
             Available for internships
           </p>
 
-          <p className="mt-8 font-display text-[clamp(3rem,9vw,7rem)] font-bold leading-[0.95] tracking-tight text-ink">
+          <h1 className="mt-8 font-display text-[clamp(3rem,9vw,7rem)] font-bold leading-[0.95] tracking-tight text-ink">
             Lucky <span className="text-gradient">Joshi</span>
-          </p>
+          </h1>
 
           <p className="mt-5 font-mono text-sm uppercase tracking-[0.25em] text-muted sm:text-base">
             Full Stack Developer <span className="text-primary">·</span> MERN{' '}
@@ -54,7 +54,7 @@ export default function HomeSection() {
               </span>
             </a>
             <a
-              href="resume.html"
+              href="/resume.html"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3 font-mono text-sm text-ink transition hover:border-primary hover:text-primary"
@@ -93,7 +93,6 @@ export default function HomeSection() {
             </span>
           </div>
           <div className="p-6 font-mono text-sm leading-relaxed sm:text-base">
-            <h1 className="sr-only">Lucky Joshi — Full Stack Developer Portfolio</h1>
             <div id="terminal-code" dangerouslySetInnerHTML={{ __html: typedCode }} />
             <div className="mt-5 border-t border-white/10 pt-4 font-mono text-xs text-muted">
               <span className="text-primary">status:</span>

@@ -43,7 +43,7 @@ export default function CommandPalette() {
         break
       case 'resume':
         body = <p>Downloading resume.pdf...</p>
-        window.open('resume.html', '_blank')
+        window.open('/resume.html', '_blank')
         break
       case 'skills':
         body = <p>Displaying skill matrix... Navigating to skills section.</p>
