@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.js",
+    "build:client": "vite build",
+    "prerender": "node scripts/prerender.js",
     "preview": "vite preview"
   },
   "dependencies": {

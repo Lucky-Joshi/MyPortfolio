@@ -60,7 +60,9 @@ export default function ProjectsSection() {
 
               <div className="p-6">
                 <h3 className="font-display text-2xl font-bold tracking-tight text-ink transition group-hover:text-primary">
-                  {project.title}
+                  <a href={`/projects/${project.slug}`} className="hover:text-primary">
+                    {project.title}
+                  </a>
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted">
                   {project.description}
@@ -79,10 +81,16 @@ export default function ProjectsSection() {
 
                 <div className="mt-6 flex gap-3 border-t border-white/10 pt-5">
                   <a
+                    href={`/projects/${project.slug}`}
+                    className="flex-1 rounded-full bg-gradient-primary px-4 py-2.5 text-center font-mono text-xs font-bold text-darkbg transition hover:scale-[1.03] hover:shadow-glow"
+                  >
+                    Case Study →
+                  </a>
+                  <a
                     href={project.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 rounded-full bg-gradient-primary px-4 py-2.5 text-center font-mono text-xs font-bold text-darkbg transition hover:scale-[1.03] hover:shadow-glow"
+                    className="flex-1 rounded-full border border-white/15 px-4 py-2.5 text-center font-mono text-xs text-ink transition hover:border-primary hover:text-primary"
                     title={project.liveTitle}
                   >
                     Live Demo ↗

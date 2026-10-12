@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import { navLinks } from '../data/navLinks'
 
-export default function Header({ activeSection }) {
+export default function Header({ activeSection, isHome = true }) {
   const [menuOpen, setMenuOpen] = useState(false)
+
+  const resolveHref = (href) => (isHome ? href : `/${href}`)
 
   const desktopLinkClass = (href) =>
     `rounded-full px-3.5 py-1.5 font-mono text-xs transition-all hover:text-primary${
@@ -16,7 +18,7 @@ export default function Header({ activeSection }) {
     <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4">
       <div className="mx-auto flex max-w-5xl items-center justify-between rounded-full border border-white/10 bg-darkbg/70 px-5 py-2.5 shadow-card backdrop-blur-xl">
         <a
-          href="#home"
+          href={isHome ? '#home' : '/'}
           className="flex items-center gap-3"
           aria-label="Lucky Joshi portfolio home"
         >
@@ -35,7 +37,7 @@ export default function Header({ activeSection }) {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={resolveHref(link.href)}
               className={desktopLinkClass(link.href)}
               aria-label={link.ariaLabel}
             >
@@ -67,7 +69,7 @@ export default function Header({ activeSection }) {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={resolveHref(link.href)}
               onClick={() => setMenuOpen(false)}
               className={mobileLinkClass(link.href)}
               aria-label={link.ariaLabel}

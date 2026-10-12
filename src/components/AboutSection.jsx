@@ -1,4 +1,5 @@
 import { skills } from '../data/skills'
+import { SITE, HAS_PHOTO } from '../data/site'
 
 export default function AboutSection() {
   return (
@@ -6,10 +7,31 @@ export default function AboutSection() {
       <div className="mx-auto max-w-6xl">
         <div className="flex items-end justify-between gap-6">
           <div>
-            <p className="eyebrow">01 // about</p>
-            <h2 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
-              About <span className="text-gradient">me</span>
-            </h2>
+            <div className="flex items-center gap-5">
+              {HAS_PHOTO && (
+                <img
+                  src={SITE.photo}
+                  alt={SITE.photoAlt}
+                  width="112"
+                  height="112"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-24 w-24 shrink-0 rounded-2xl border border-white/10 object-cover md:h-28 md:w-28"
+                />
+              )}
+              <div>
+                <p className="eyebrow">01 // about</p>
+                <h2 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
+                  About <span className="text-gradient">Lucky Joshi</span>
+                </h2>
+              </div>
+            </div>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+              I&apos;m <strong className="font-semibold text-ink">Lucky Joshi</strong>, a full stack
+              MERN developer and AI intern from Delhi, India. I build responsive web apps, REST APIs
+              and AI-powered tools, and I&apos;m currently open to software engineering and AI
+              internship roles.
+            </p>
           </div>
           <span
             aria-hidden="true"
