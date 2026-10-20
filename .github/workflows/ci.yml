@@ -40,12 +40,12 @@ jobs:
             manifest.json \
             _headers \
             resume.html \
-            googlefee5e33e88711b62.html \
             "Lucky Joshi - Resume.pdf" \
             apple-touch-icon.png \
             icon-192.png \
             icon-512.png \
             preview.png \
+            lucky-joshi.webp \
             projects/mentixo-ai/index.html \
             projects/devflow/index.html \
             projects/periodic-table-game/index.html \
